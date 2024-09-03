@@ -10,14 +10,14 @@ enum layer_names {
     _GAME,
 };
 
+#define NAV_RET LT(_NAV, KC_RETURN)
+#define SYM_SP LT(_SYMBOLS, KC_SPACE)
+#define NUM_ESC LT(_NUMBERS, KC_ESC)
+
 #include "keymap_canadian_multilingual.h"
 #include "macros.c"
 #include "overrides.c"
 #include "combos.c"
-
-#define NAV_RET LT(_NAV, KC_RETURN)
-#define SYM_SP LT(_SYMBOLS, KC_SPACE)
-#define NUM_ESC LT(_NUMBERS, KC_ESC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
