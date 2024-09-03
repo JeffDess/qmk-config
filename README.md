@@ -3,9 +3,9 @@
 This repository includes my personal QMK keymaps to build firmware for
 keyboards and trackballs:
 
-* [Fingerpunch Ximi v2 Keyboard](keymaps/fingerpunch/ximi/v2/jeffdess)
+* [Fingerpunch Ximi v2 Keyboard](keyboards/fingerpunch/ximi/v2/keymaps/jeffdess)
 (build in process, keymap has not been tested correctly yet)
-* [Ploopy Nano Trackball](keymaps/ploopyco/trackball_nano/rev1_001/jeffdess)
+* [Ploopy Nano Trackball](keyboards/ploopyco/trackball_nano/rev1_001/keymaps/jeffdess)
 
 1. Run the normal `qmk setup` procedure if you haven't already done so
   -- see [QMK Docs](https://docs.qmk.fm/#/newbs) for details.
