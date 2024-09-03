@@ -7,8 +7,6 @@ keyboards and trackballs:
 (build in process, keymap has not been tested correctly yet)
 * [Ploopy Nano Trackball](keymaps/ploopyco/trackball_nano/rev1_001/jeffdess)
 
-## Build
-
 1. Run the normal `qmk setup` procedure if you haven't already done so
   -- see [QMK Docs](https://docs.qmk.fm/#/newbs) for details.
 1. Clone this repository
