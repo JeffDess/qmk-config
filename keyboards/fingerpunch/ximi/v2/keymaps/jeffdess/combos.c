@@ -13,7 +13,8 @@ enum combos {
     CB_ARROW,
     CB_LTE,
     CB_GTE,
-    CB_TAB
+    CB_TAB,
+    CB_NAV_TOGGLE
 };
 
 const uint16_t PROGMEM cut[]          = {KC_Z, KC_X, COMBO_END};
@@ -31,6 +32,7 @@ const uint16_t PROGMEM arrow[]        = {CA_RBRC, CA_UNDS, COMBO_END};
 const uint16_t PROGMEM lte[]          = {CA_LABK, CA_RABK, COMBO_END};
 const uint16_t PROGMEM gte[]          = {CA_LDAQ, CA_RDAQ, COMBO_END};
 const uint16_t PROGMEM tab[]          = {KC_BSPC, SYM_SP, COMBO_END};
+const uint16_t PROGMEM nav_toggle[]   = {NAV_RET, NUM_ESC, COMBO_END};
 
 combo_t key_combos[] = {
     [CB_CUT]          = COMBO(cut, LCTL(KC_X)),
@@ -48,4 +50,5 @@ combo_t key_combos[] = {
     [CB_LTE]          = COMBO(lte, LTE),
     [CB_GTE]          = COMBO(gte, GTE),
     [CB_TAB]          = COMBO(tab, KC_TAB),
+    [CB_NAV_TOGGLE]   = COMBO(nav_toggle, TG(_NAV)),
 };
