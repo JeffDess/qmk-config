@@ -5,6 +5,8 @@ keyboards and trackballs:
 
 * [Fingerpunch Ximi v2 Keyboard](keyboards/fingerpunch/ximi/v2/keymaps/jeffdess)
 (build in process, keymap has not been tested correctly yet)
+* [KeyClicks W-Ergolite](keyboards/keyclicks/w_ergolite/keymaps/jeffdess)
+(build in process, currently in default state)
 * [Ploopy Nano Trackball](keyboards/ploopyco/trackball_nano/rev1_001/keymaps/jeffdess)
 
 ## Build
