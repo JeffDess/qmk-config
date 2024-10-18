@@ -1,4 +1,5 @@
 #pragma once
+#define MASTER_RIGHT
 #define ___ KC_NO
 #define UNDO C(KC_Z)
 #define REDO C(S(KC_Z))
