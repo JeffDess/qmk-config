@@ -29,7 +29,9 @@ enum combos {
     CB_LTE,
     CB_GTE,
     CB_TAB,
-    CB_NAV_TOGGLE
+    CB_NAV_TOGGLE,
+    CB_MS_LCLICK,
+    CB_MS_RCLICK
 };
 
 const uint16_t PROGMEM cut[]          = {KC_Z, KC_X, COMBO_END};
@@ -48,22 +50,24 @@ const uint16_t PROGMEM lte[]          = {CA_LABK, CA_RABK, COMBO_END};
 const uint16_t PROGMEM gte[]          = {CA_LDAQ, CA_RDAQ, COMBO_END};
 const uint16_t PROGMEM tab[]          = {KC_BSPC, SYM_SP, COMBO_END};
 const uint16_t PROGMEM nav_toggle[]   = {NAV_RET, NUM_ESC, COMBO_END};
+const uint16_t PROGMEM mouse_lclick[] = {KC_F, KC_P, COMBO_END};
+const uint16_t PROGMEM mouse_rclick[] = {KC_Q, KC_W, COMBO_END};
 
-combo_t key_combos[] = {
-    [CB_CUT]          = COMBO(cut, LCTL(KC_X)),
-    [CB_COPY]         = COMBO(copy, LCTL(KC_C)),
-    [CB_PASTE]        = COMBO(paste, LCTL(KC_V)),
-    [CB_PRINTSCREEN]  = COMBO(printscreen, KC_PSCR),
-    [CB_CAPS_WORD]    = COMBO(capsword, QK_CAPS_WORD_TOGGLE),
-    [CB_CAPS_LOCK]    = COMBO(capslock, KC_CAPS),
-    [CB_TMUX_COMMAND] = COMBO(tmux_command, TMUX_CMD),
-    [CB_TMUX_SESS]    = COMBO(tmux_command, TMUX_SESSION),
-    [CB_MOUSE_LAYER]  = COMBO(mouse_layer, TG(_MOUSE)),
-    [CB_GAME_LAYER]   = COMBO(game_layer, TG(_GAME)),
-    [CB_FAT_ARROW]    = COMBO(fat_arrow, FAT_ARROW),
-    [CB_ARROW]        = COMBO(arrow, ARROW),
-    [CB_LTE]          = COMBO(lte, LTE),
-    [CB_GTE]          = COMBO(gte, GTE),
-    [CB_TAB]          = COMBO(tab, KC_TAB),
-    [CB_NAV_TOGGLE]   = COMBO(nav_toggle, TG(_NAV)),
-};
+combo_t key_combos[] = {[CB_CUT]          = COMBO(cut, LCTL(KC_X)),
+                        [CB_COPY]         = COMBO(copy, LCTL(KC_C)),
+                        [CB_PASTE]        = COMBO(paste, LCTL(KC_V)),
+                        [CB_PRINTSCREEN]  = COMBO(printscreen, KC_PSCR),
+                        [CB_CAPS_WORD]    = COMBO(capsword, QK_CAPS_WORD_TOGGLE),
+                        [CB_CAPS_LOCK]    = COMBO(capslock, KC_CAPS),
+                        [CB_TMUX_COMMAND] = COMBO(tmux_command, TMUX_CMD),
+                        [CB_TMUX_SESS]    = COMBO(tmux_command, TMUX_SESSION),
+                        [CB_MOUSE_LAYER]  = COMBO(mouse_layer, TG(_MOUSE)),
+                        [CB_GAME_LAYER]   = COMBO(game_layer, TG(_GAME)),
+                        [CB_FAT_ARROW]    = COMBO(fat_arrow, FAT_ARROW),
+                        [CB_ARROW]        = COMBO(arrow, ARROW),
+                        [CB_LTE]          = COMBO(lte, LTE),
+                        [CB_GTE]          = COMBO(gte, GTE),
+                        [CB_TAB]          = COMBO(tab, KC_TAB),
+                        [CB_NAV_TOGGLE]   = COMBO(nav_toggle, TG(_NAV)),
+                        [CB_MS_LCLICK]    = COMBO(mouse_lclick, KC_MS_BTN1),
+                        [CB_MS_RCLICK]    = COMBO(mouse_rclick, KC_MS_BTN2)};
