@@ -1,3 +1,18 @@
+#define COMBO_REF_DEFAULT _COLEMAK
+
+uint8_t combo_ref_from_layer(uint8_t layer) {
+    switch (get_highest_layer(layer_state)) {
+        case _SYMBOLS:
+            return _SYMBOLS;
+        case _NAV:
+            return _NAV;
+        default:
+            return _COLEMAK;
+    }
+
+    return layer; // important if default is not in case.
+}
+
 enum combos {
     CB_COPY,
     CB_CUT,
