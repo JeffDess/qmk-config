@@ -1,9 +1,6 @@
 #pragma once
 #define MASTER_RIGHT
 #define ___ KC_NO
-#define UNDO C(KC_Z)
-#define REDO C(S(KC_Z))
-#define REDO2 C(KC_Y)
 
 // clang-format off
 #define LAYOUT_ximi_5col( \

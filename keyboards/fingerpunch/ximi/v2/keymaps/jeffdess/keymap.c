@@ -15,6 +15,9 @@ enum layer_names {
 #define NUM_ESC LT(_NUMBERS, KC_ESC)
 #define DPI_RESET FP_POINT_DPI_RESET
 #define ZOOM_RESET LCTL(KC_0)
+#define UNDO C(KC_Z)
+#define REDO C(S(KC_Z))
+#define REDO2 C(KC_Y)
 
 #include "keymap_canadian_multilingual.h"
 #include "macros.c"
