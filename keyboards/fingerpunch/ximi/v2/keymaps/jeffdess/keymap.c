@@ -10,7 +10,7 @@ enum layer_names {
     _GAME,
 };
 
-#define NAV_RET LT(_NAV, KC_RETURN)
+#define NAV_RET LT(_NAV, KC_ENTER)
 #define SYM_SP LT(_SYMBOLS, KC_SPACE)
 #define NUM_ESC LT(_NUMBERS, KC_ESC)
 #define DPI_RESET FP_POINT_DPI_RESET
