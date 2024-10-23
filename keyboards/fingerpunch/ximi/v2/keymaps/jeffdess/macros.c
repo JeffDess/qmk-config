@@ -21,6 +21,7 @@ enum custom_keycodes {
     U_GR,
     U_TR,
     GRAVE,
+    TILDE,
     CIRC,
     SLSH_BSLSH,
     DASH_TILDE,
@@ -68,6 +69,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 break;
             case GRAVE:
                 send_dead_accent("`");
+                break;
+            case TILDE:
+                send_dead_accent("~");
                 break;
             case A_CI:
                 send_accent("â", "Â", mod_state);

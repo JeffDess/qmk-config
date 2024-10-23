@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_SYMBOLS] = LAYOUT_ximi_5col(
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ ╭─────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-       CA_HASH    ,     CA_AT    ,   CA_LCBR    ,   CA_RCBR    ,    CA_PLUS   ,     XXXXXXX   ,    CA_TILD   ,     GRAVE    ,    CA_DLR    ,    XXXXXXX   ,
+       CA_HASH    ,     CA_AT    ,   CA_LCBR    ,   CA_RCBR    ,    CA_PLUS   ,     XXXXXXX   ,     TILDE    ,     GRAVE    ,    CA_DLR    ,    XXXXXXX   ,
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├─────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
        CA_SLSH    ,    CA_MINS   ,   CA_LPRN    ,   CA_RPRN    ,    CA_EQL    ,      CIRC     ,    CA_QUES   ,    CA_EXLM   ,    CA_AMPR   ,    CA_PIPE   ,
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├─────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
