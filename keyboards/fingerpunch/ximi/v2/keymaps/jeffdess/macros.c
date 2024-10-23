@@ -51,13 +51,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
             case GRAVE:
-                send_dead_accent("`");
+                SEND_STRING("`");
                 break;
             case CIRC:
-                send_dead_accent("^");
+                SEND_STRING("^");
                 break;
             case TILDE:
-                send_dead_accent("~");
+                SEND_STRING("~");
                 break;
             case A_CI:
                 send_accent("â", "Â", mod_state);
