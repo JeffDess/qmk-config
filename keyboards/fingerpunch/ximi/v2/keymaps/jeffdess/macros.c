@@ -70,6 +70,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case GRAVE:
                 send_dead_accent("`");
                 break;
+            case CIRC:
+                send_dead_accent("^");
+                break;
             case TILDE:
                 send_dead_accent("~");
                 break;
