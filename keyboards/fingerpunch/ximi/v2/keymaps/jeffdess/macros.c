@@ -1,8 +1,6 @@
 #include <stdint.h>
 #include "sendstring_canadian_multilingual.h"
 
-#define TMUX SS_LCTL(SS_LALT("j")) // Tmux -> Ctrl + Alt + J
-
 uint8_t mod_state;
 enum custom_keycodes {
     ACC_CI = SAFE_RANGE,
@@ -123,10 +121,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING(" <= ");
                 break;
             case TMUX_CMD:
-                SEND_STRING(TMUX ";");
+                SEND_STRING(SS_TMUX ";");
                 break;
             case TMUX_SESSION:
-                SEND_STRING(TMUX "; new -s ");
+                SEND_STRING(SS_TMUX "; new -s ");
                 break;
         }
     }

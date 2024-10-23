@@ -10,21 +10,13 @@ enum layer_names {
     _GAME,
 };
 
-#define NAV_RET LT(_NAV, KC_ENTER)
-#define SYM_SP LT(_SYMBOLS, KC_SPACE)
-#define NUM_ESC LT(_NUMBERS, KC_ESC)
-#define DPI_RESET FP_POINT_DPI_RESET
-#define ZOOM_RESET LCTL(KC_0)
-#define UNDO C(KC_Z)
-#define REDO C(S(KC_Z))
-#define REDO2 C(KC_Y)
-
 #include "keymap_canadian_multilingual.h"
+#include "keycodes.h"
+#include "encoders.h"
+#include "haptic.h"
 #include "macros.c"
 #include "overrides.c"
 #include "combos.c"
-#include "encoders.c"
-#include "haptic.c"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
