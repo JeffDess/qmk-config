@@ -99,10 +99,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING(" <= ");
                 break;
             case TMUX_CMD:
-                SEND_STRING(SS_TMUX ";");
+                SEND_STRING(SS_TMUX SS_TAP(X_SEMICOLON));
                 break;
             case TMUX_SESSION:
-                SEND_STRING(SS_TMUX "; new -s ");
+                SEND_STRING(SS_TMUX SS_TAP(X_SEMICOLON) SS_DELAY(10) "new -s ");
                 break;
         }
     }
