@@ -39,11 +39,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_ACCENTS] = LAYOUT_ximi_5col(
 // ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮ ╭─────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-       XXXXXXX    ,    XXXXXXX   ,     E_TR     ,    XXXXXXX   ,    XXXXXXX   ,     XXXXXXX   ,     I_TR     ,     O_TR     ,     U_TR     ,    ACC_TR    ,
+       XXXXXXX    ,    XXXXXXX   ,     E_TR     ,    XXXXXXX   ,    XXXXXXX   ,     XXXXXXX   ,     I_TR     ,     O_TR     ,     U_TR     ,    CA_DIAE   ,
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├─────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-         A_GR     ,      E_CI    ,     E_CU     , LSFT_T(E_GR) ,    XXXXXXX   ,     XXXXXXX   , RSFT_T(I_CI) ,     O_CI     ,     U_CI     ,    ACC_GR    ,
+         A_GR     ,      E_CI    ,     E_CU     , LSFT_T(E_GR) ,    XXXXXXX   ,     XXXXXXX   , RSFT_T(I_CI) ,     O_CI     ,     U_CI     ,    CA_GRV    ,
 // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├─────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-         A_CI     ,    XXXXXXX   ,     CEDIL    ,   XXXXXXX    ,    XXXXXXX   ,     XXXXXXX   ,  XXXXXXX     ,   XXXXXXX    ,     U_GR     ,    ACC_CI    ,
+         A_CI     ,    XXXXXXX   ,     CEDIL    ,   XXXXXXX    ,    XXXXXXX   ,     XXXXXXX   ,  XXXXXXX     ,   XXXXXXX    ,     U_GR     ,    CA_CIRC   ,
 // ╰──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ ├─────────────┼──────────────┼──────────────┼──────────────┼──────────────╯
                       HF_TOGG    ,    _______   ,   _______    , TO(_COLEMAK) ,     _______   ,   _______    ,   _______    ,   RGB_TOG    ,
 //                ╰──────────────┴──────────────┴──────────────┴──────────────╯ ╰─────────────┴──────────────┴──────────────┴──────────────╯
