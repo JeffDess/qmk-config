@@ -9,6 +9,12 @@
 #define REDO2 C(KC_Y)
 #define UNDO C(KC_Z)
 
+#define CEDIL CA_CCED
+#define A_GR CA_AGRV
+#define E_GR CA_EGRV
+#define E_CU CA_EACU
+#define U_GR CA_UGRV
+
 // Tmux -> Ctrl + Alt + J
 #define SS_TMUX SS_LCTL(SS_LALT("j"))
 #define TMUX LCTL(LALT(KC_J))

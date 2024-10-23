@@ -3,22 +3,14 @@
 
 uint8_t mod_state;
 enum custom_keycodes {
-    ACC_CI = SAFE_RANGE,
-    ACC_GR,
-    ACC_TR,
-    A_CI,
-    A_GR,
-    CEDIL,
+    A_CI = SAFE_RANGE,
     E_CI,
-    E_CU,
-    E_GR,
     E_TR,
     I_CI,
     I_TR,
     O_CI,
     O_TR,
     U_CI,
-    U_GR,
     U_TR,
     GRAVE,
     TILDE,
@@ -58,15 +50,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     mod_state = get_mods();
     if (record->event.pressed) {
         switch (keycode) {
-            case ACC_CI:
-                send_dead_accent("^");
-                break;
-            case ACC_GR:
-                send_dead_accent("`");
-                break;
-            case ACC_TR:
-                send_dead_accent("¨");
-                break;
             case GRAVE:
                 send_dead_accent("`");
                 break;
@@ -79,20 +62,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case A_CI:
                 send_accent("â", "Â", mod_state);
                 break;
-            case A_GR:
-                send_accent("à", "À", mod_state);
-                break;
-            case CEDIL:
-                send_accent("ç", "Ç", mod_state);
-                break;
             case E_CI:
                 send_accent("ê", "Ê", mod_state);
-                break;
-            case E_CU:
-                send_accent("é", "É", mod_state);
-                break;
-            case E_GR:
-                send_accent("è", "È", mod_state);
                 break;
             case E_TR:
                 send_accent("ë", "Ë", mod_state);
@@ -111,9 +82,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 break;
             case U_CI:
                 send_accent("û", "Û", mod_state);
-                break;
-            case U_GR:
-                send_accent("ù", "Ù", mod_state);
                 break;
             case U_TR:
                 send_accent("ü", "Ü", mod_state);
