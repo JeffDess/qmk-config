@@ -19,6 +19,9 @@
 #define FP_HAPTIC_ENABLE
 #define HAPTIC_FEEDBACK
 
+#undef TAPPING_TERM
+#define TAPPING_TERM 300
+
 #define ___ KC_NO
 
 // clang-format off
