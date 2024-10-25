@@ -2,7 +2,7 @@
 #include "sendstring_canadian_multilingual.h"
 
 #define SS_CIRC SS_TAP(X_LBRC)
-#define SS_TREM SS_ALGR(SS_TAP(X_LBRC))
+#define SS_TREM SS_LSFT(SS_TAP(X_LBRC))
 
 uint8_t mod_state;
 enum custom_keycodes {
@@ -71,13 +71,31 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         switch (keycode) {
             case GRAVE:
                 SEND_STRING("`");
-                break;
+                return false;
             case CIRC:
                 SEND_STRING("^");
-                break;
+                return false;
             case TILDE:
                 SEND_STRING("~");
-                break;
+                return false;
+            case FAT_ARROW:
+                SEND_STRING(" => ");
+                return false;
+            case ARROW:
+                SEND_STRING(" -> ");
+                return false;
+            case GTE:
+                SEND_STRING(" >= ");
+                return false;
+            case LTE:
+                SEND_STRING(" <= ");
+                return false;
+            case TMUX_CMD:
+                SEND_STRING(SS_TMUX SS_TAP(X_SEMICOLON));
+                return false;
+            case TMUX_SESSION:
+                SEND_STRING(SS_TMUX SS_TAP(X_SEMICOLON) SS_DELAY(10) "new -s ");
+                return false;
             case A_CI:
                 if (mod_state & MOD_MASK_SHIFT) {
                     del_mods(MOD_MASK_SHIFT);
@@ -85,20 +103,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING(SS_CIRC SS_TAP(X_A));
                 }
-                deactivate_current_layer();
-                break;
+                return false;
             case A_GR:
                 tap_code(CA_AGRV);
-                deactivate_current_layer();
-                break;
+                return false;
             case CEDIL:
                 tap_code(CA_CCED);
-                deactivate_current_layer();
-                break;
+                return false;
             case E_CU:
                 tap_code(CA_EACU);
-                deactivate_current_layer();
-                break;
+                return false;
             case E_CI:
                 if (mod_state & MOD_MASK_SHIFT) {
                     del_mods(MOD_MASK_SHIFT);
@@ -106,11 +120,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING(SS_CIRC SS_TAP(X_E));
                 }
-                deactivate_current_layer();
-                break;
-            case E_GR:
-                tap_code(CA_EGRV);
-                deactivate_current_layer();
+                return false;
+            case LSFT_T(E_GR):
+                if (record->tap.count) {
+                    tap_code(CA_EGRV);
+                    return false;
+                }
                 break;
             case E_TR:
                 if (mod_state & MOD_MASK_SHIFT) {
@@ -119,16 +134,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING(SS_TREM SS_TAP(X_E));
                 }
-                deactivate_current_layer();
-                break;
-            case I_CI:
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    SEND_STRING(SS_CIRC SS_LSFT(SS_TAP(X_I)));
-                } else {
-                    SEND_STRING(SS_CIRC SS_TAP(X_I));
+                return false;
+            case RSFT_T(I_CI):
+                if (record->tap.count) {
+                    if (mod_state & MOD_MASK_SHIFT) {
+                        del_mods(MOD_MASK_SHIFT);
+                        SEND_STRING(SS_CIRC SS_LSFT(SS_TAP(X_I)));
+                    } else {
+                        SEND_STRING(SS_CIRC SS_TAP(X_I));
+                    }
+                    return false;
                 }
-                deactivate_current_layer();
                 break;
             case I_TR:
                 if (mod_state & MOD_MASK_SHIFT) {
@@ -137,8 +153,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING(SS_TREM SS_TAP(X_I));
                 }
-                deactivate_current_layer();
-                break;
+                return false;
             case O_CI:
                 if (mod_state & MOD_MASK_SHIFT) {
                     del_mods(MOD_MASK_SHIFT);
@@ -146,8 +161,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING(SS_CIRC SS_TAP(X_O));
                 }
-                deactivate_current_layer();
-                break;
+                return false;
             case O_TR:
                 if (mod_state & MOD_MASK_SHIFT) {
                     del_mods(MOD_MASK_SHIFT);
@@ -155,8 +169,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING(SS_TREM SS_TAP(X_O));
                 }
-                deactivate_current_layer();
-                break;
+                return false;
             case U_CI:
                 if (mod_state & MOD_MASK_SHIFT) {
                     del_mods(MOD_MASK_SHIFT);
@@ -164,12 +177,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING(SS_CIRC SS_TAP(X_U));
                 }
-                deactivate_current_layer();
-                break;
+                return false;
             case U_GR:
                 tap_code(CA_UGRV);
-                deactivate_current_layer();
-                break;
+                return false;
             case U_TR:
                 if (mod_state & MOD_MASK_SHIFT) {
                     del_mods(MOD_MASK_SHIFT);
@@ -177,27 +188,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 } else {
                     SEND_STRING(SS_TREM SS_TAP(X_U));
                 }
-                deactivate_current_layer();
-                break;
-            case FAT_ARROW:
-                SEND_STRING(" => ");
-                break;
-            case ARROW:
-                SEND_STRING(" -> ");
-                break;
-            case GTE:
-                SEND_STRING(" >= ");
-                break;
-            case LTE:
-                SEND_STRING(" <= ");
-                break;
-            case TMUX_CMD:
-                SEND_STRING(SS_TMUX SS_TAP(X_SEMICOLON));
-                break;
-            case TMUX_SESSION:
-                SEND_STRING(SS_TMUX SS_TAP(X_SEMICOLON) SS_DELAY(10) "new -s ");
-                break;
-        }
+                return false;
+        };
     }
     return true;
 };
