@@ -96,6 +96,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case TMUX_SESSION:
                 SEND_STRING(SS_TMUX SS_TAP(X_SEMICOLON) SS_DELAY(10) "new -s ");
                 return false;
+            case CA_MINS:
+                if (mod_state & MOD_MASK_SHIFT) {
+                    del_mods(MOD_MASK_SHIFT);
+                    SEND_STRING("~");
+                } else {
+                    SEND_STRING("-");
+                }
+                return false;
             case A_CI:
                 if (mod_state & MOD_MASK_SHIFT) {
                     del_mods(MOD_MASK_SHIFT);

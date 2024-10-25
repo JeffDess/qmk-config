@@ -11,8 +11,7 @@ const key_override_t comma_dot_override =
     ko_make_with_layers(MOD_MASK_SHIFT, KC_COMM, KC_DOT, ~_NUMBERS);
 
 const key_override_t slash_backslash_override =
-const key_override_t dash_tilde_override =
-    ko_make_with_layers(MOD_MASK_SHIFT, CA_MINS, CA_TILD, _SYMBOLS);
+    ko_make_with_layers(MOD_MASK_SHIFT, CA_SLSH, CA_BSLS, ~_SYMBOLS);
 
 const key_override_t escape_shift_click_override =
     ko_make_basic(MOD_MASK_SHIFT, KC_ESC, S(KC_MS_BTN1));
@@ -27,6 +26,7 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &multi_div_override,
     &comma_dot_override,
     &slash_backslash_override,
-    &dash_tilde_override,
     &escape_shift_click_override,
 };
+
+
