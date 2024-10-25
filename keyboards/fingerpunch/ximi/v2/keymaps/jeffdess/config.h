@@ -22,6 +22,8 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 280
 #define QUICK_TAP_TERM 175
+#undef COMBO_TERM
+#define COMBO_TERM 60
 
 #define ___ KC_NO
 
