@@ -20,7 +20,8 @@
 #define HAPTIC_FEEDBACK
 
 #undef TAPPING_TERM
-#define TAPPING_TERM 300
+#define TAPPING_TERM 280
+#define QUICK_TAP_TERM 175
 
 #define ___ KC_NO
 
