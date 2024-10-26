@@ -34,35 +34,15 @@ enum custom_keycodes {
     TMUX_CMD,
 };
 
-void deactivate_current_layer(void) {
-    uint8_t current_layer = get_highest_layer(layer_state);
-    clear_keyboard_but_mods();
-    layer_invert(current_layer);
-}
-
-void send_circ_accent(const uint16_t letter, uint8_t mod_state) {
+void send_accent(uint16_t keycode, const char *accent, uint8_t mod_state) {
     if (mod_state & MOD_MASK_SHIFT) {
         del_mods(MOD_MASK_SHIFT);
-        SEND_STRING(SS_TAP(X_LBRC) SS_LSFT(SS_TAP(X_A)));
+        SEND_STRING(accent);
+        tap_code16(S(keycode));
     } else {
-        SEND_STRING(SS_TAP(X_LBRC) SS_TAP(X_A));
+        SEND_STRING(accent);
+        tap_code16(keycode);
     }
-    deactivate_current_layer();
-}
-
-void send_diae_accent(const uint16_t letter, uint8_t mod_state) {
-    if (mod_state & MOD_MASK_SHIFT) {
-        del_mods(MOD_MASK_SHIFT);
-        SEND_STRING(SS_ALGR(SS_TAP(X_LBRC)) SS_LSFT(SS_TAP(X_A)));
-    } else {
-        SEND_STRING(SS_ALGR(SS_TAP(X_LBRC)) SS_TAP(X_A));
-    }
-    deactivate_current_layer();
-}
-
-void send_dead_accent(const char *accent) {
-    SEND_STRING(accent);
-    deactivate_current_layer();
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -105,12 +85,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
                 return false;
             case A_CI:
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    SEND_STRING(SS_CIRC SS_LSFT(SS_TAP(X_A)));
-                } else {
-                    SEND_STRING(SS_CIRC SS_TAP(X_A));
-                }
+                send_accent(KC_A, SS_CIRC, mod_state);
                 return false;
             case A_GR:
                 tap_code(CA_AGRV);
@@ -118,16 +93,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case CEDIL:
                 tap_code(CA_CCED);
                 return false;
+            case E_CI:
+                send_accent(KC_E, SS_CIRC, mod_state);
+                return false;
             case E_CU:
                 tap_code(CA_EACU);
-                return false;
-            case E_CI:
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    SEND_STRING(SS_CIRC SS_LSFT(SS_TAP(X_E)));
-                } else {
-                    SEND_STRING(SS_CIRC SS_TAP(X_E));
-                }
                 return false;
             case LSFT_T(E_GR):
                 if (record->tap.count) {
@@ -136,66 +106,31 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
                 break;
             case E_TR:
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    SEND_STRING(SS_TREM SS_LSFT(SS_TAP(X_E)));
-                } else {
-                    SEND_STRING(SS_TREM SS_TAP(X_E));
-                }
+                send_accent(KC_E, SS_TREM, mod_state);
                 return false;
             case RSFT_T(I_CI):
                 if (record->tap.count) {
-                    if (mod_state & MOD_MASK_SHIFT) {
-                        del_mods(MOD_MASK_SHIFT);
-                        SEND_STRING(SS_CIRC SS_LSFT(SS_TAP(X_I)));
-                    } else {
-                        SEND_STRING(SS_CIRC SS_TAP(X_I));
-                    }
+                    send_accent(KC_I, SS_CIRC, mod_state);
                     return false;
                 }
                 break;
             case I_TR:
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    SEND_STRING(SS_TREM SS_LSFT(SS_TAP(X_I)));
-                } else {
-                    SEND_STRING(SS_TREM SS_TAP(X_I));
-                }
+                send_accent(KC_I, SS_TREM, mod_state);
                 return false;
             case O_CI:
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    SEND_STRING(SS_CIRC SS_LSFT(SS_TAP(X_O)));
-                } else {
-                    SEND_STRING(SS_CIRC SS_TAP(X_O));
-                }
+                send_accent(KC_O, SS_CIRC, mod_state);
                 return false;
             case O_TR:
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    SEND_STRING(SS_TREM SS_LSFT(SS_TAP(X_O)));
-                } else {
-                    SEND_STRING(SS_TREM SS_TAP(X_O));
-                }
+                send_accent(KC_O, SS_TREM, mod_state);
                 return false;
             case U_CI:
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    SEND_STRING(SS_CIRC SS_LSFT(SS_TAP(X_U)));
-                } else {
-                    SEND_STRING(SS_CIRC SS_TAP(X_U));
-                }
+                send_accent(KC_U, SS_CIRC, mod_state);
                 return false;
             case U_GR:
                 tap_code(CA_UGRV);
                 return false;
             case U_TR:
-                if (mod_state & MOD_MASK_SHIFT) {
-                    del_mods(MOD_MASK_SHIFT);
-                    SEND_STRING(SS_TREM SS_LSFT(SS_TAP(X_U)));
-                } else {
-                    SEND_STRING(SS_TREM SS_TAP(X_U));
-                }
+                send_accent(KC_U, SS_TREM, mod_state);
                 return false;
         };
     }
