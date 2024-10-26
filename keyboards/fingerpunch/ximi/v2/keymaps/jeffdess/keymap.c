@@ -12,7 +12,6 @@ enum layer_names {
 
 #include "keymap_canadian_multilingual.h"
 #include "keycodes.h"
-#include "encoders.h"
 #include "macros.c"
 #include "overrides.c"
 #include "combos.c"

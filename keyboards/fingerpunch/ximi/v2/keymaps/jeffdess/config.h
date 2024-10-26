@@ -1,4 +1,5 @@
 #pragma once
+#include "encoders.h"
 #define MASTER_RIGHT
 
 // Boot mode if pressing down outer thumb key while connecting the keyboard
