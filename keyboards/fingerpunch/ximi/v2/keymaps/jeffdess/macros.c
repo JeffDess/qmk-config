@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include "drivers/haptic/drv2605l.h"
 #include "sendstring_canadian_multilingual.h"
 
 #define SS_CIRC SS_TAP(X_LBRC)
@@ -132,6 +133,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case U_TR:
                 send_accent(KC_U, SS_TREM, mod_state);
                 return false;
+            case LCTL_T(KC_S):
+                if (record->event.pressed) {
+                    if ((get_mods() & MOD_MASK_CTRL) || (get_oneshot_mods() & MOD_MASK_CTRL)) {
+                        drv2605l_pulse(DRV2605L_EFFECT_TRANSITION_CLICK_1_100);
+                    }
+                }
+                break;
         };
     }
     return true;
