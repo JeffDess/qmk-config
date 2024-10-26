@@ -1,3 +1,5 @@
+#include <stdint.h>
+#include "drivers/haptic/drv2605l.h"
 #define COMBO_REF_DEFAULT _COLEMAK
 
 uint8_t combo_ref_from_layer(uint8_t layer) {
@@ -55,9 +57,9 @@ const uint16_t PROGMEM nav_toggle[]   = {NAV_RET, NUM_ESC, COMBO_END};
 const uint16_t PROGMEM mouse_lclick[] = {KC_F, KC_P, COMBO_END};
 const uint16_t PROGMEM mouse_rclick[] = {KC_Q, KC_W, COMBO_END};
 
-combo_t key_combos[] = {[CB_CUT]          = COMBO(cut, LCTL(KC_X)),
-                        [CB_COPY]         = COMBO(copy, LCTL(KC_C)),
-                        [CB_PASTE]        = COMBO(paste, LCTL(KC_V)),
+combo_t key_combos[] = {[CB_CUT]          = COMBO_ACTION(cut),
+                        [CB_COPY]         = COMBO_ACTION(copy),
+                        [CB_PASTE]        = COMBO_ACTION(paste),
                         [CB_PRINTSCREEN]  = COMBO(printscreen, KC_PSCR),
                         [CB_CAPS_WORD]    = COMBO(capsword, QK_CAPS_WORD_TOGGLE),
                         [CB_CAPS_LOCK]    = COMBO(capslock, KC_CAPS),
@@ -74,3 +76,32 @@ combo_t key_combos[] = {[CB_CUT]          = COMBO(cut, LCTL(KC_X)),
                         [CB_NAV_TOGGLE]   = COMBO(nav_toggle, TG(_NAV)),
                         [CB_MS_LCLICK]    = COMBO(mouse_lclick, KC_MS_BTN1),
                         [CB_MS_RCLICK]    = COMBO(mouse_rclick, KC_MS_BTN2)};
+
+void process_combo_event(uint16_t combo_index, bool pressed) {
+    switch (combo_index) {
+        case CB_COPY:
+            if (pressed) {
+                register_code16(KC_LCTL);
+                tap_code16(KC_C);
+                unregister_code16(KC_LCTL);
+                drv2605l_pulse(DRV2605L_EFFECT_LONG_DOUBLE_SHARP_CLICK_STRONG_1_100);
+            }
+            break;
+        case CB_CUT:
+            if (pressed) {
+                register_code16(KC_LCTL);
+                tap_code16(KC_X);
+                unregister_code16(KC_LCTL);
+                drv2605l_pulse(DRV2605L_EFFECT_LONG_DOUBLE_SHARP_CLICK_STRONG_1_100);
+            }
+            break;
+        case CB_PASTE:
+            if (pressed) {
+                register_code16(KC_LCTL);
+                tap_code16(KC_V);
+                unregister_code16(KC_LCTL);
+                drv2605l_pulse(DRV2605L_EFFECT_SOFT_BUMP_100);
+            }
+            break;
+    }
+}
