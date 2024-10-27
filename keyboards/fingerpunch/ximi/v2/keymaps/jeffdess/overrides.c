@@ -16,6 +16,9 @@ const key_override_t slash_backslash_override =
 const key_override_t escape_shift_click_override =
     ko_make_basic(MOD_MASK_SHIFT, KC_ESC, S(KC_MS_BTN1));
 
+const key_override_t exclamation_inverted_override =
+    ko_make_basic(MOD_MASK_SHIFT, KC_EXLM, CA_IEXL);
+
 const key_override_t escape_ctrl_click_override =
     ko_make_basic(MOD_MASK_CTRL, KC_ESC, C(KC_MS_BTN1));
 
@@ -27,6 +30,7 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &comma_dot_override,
     &slash_backslash_override,
     &escape_shift_click_override,
+    &exclamation_inverted_override
 };
 
 
