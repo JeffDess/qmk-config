@@ -84,8 +84,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 register_code16(KC_LCTL);
                 tap_code16(KC_C);
                 unregister_code16(KC_LCTL);
-                drv2605l_pulse(DRV2605L_EFFECT_LONG_DOUBLE_SHARP_CLICK_STRONG_1_100);
-                haptic_play();
+                pulse_both(DRV2605L_EFFECT_LONG_DOUBLE_SHARP_CLICK_STRONG_1_100);
             }
             break;
         case CB_CUT:
@@ -93,8 +92,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 register_code16(KC_LCTL);
                 tap_code16(KC_X);
                 unregister_code16(KC_LCTL);
-                drv2605l_pulse(DRV2605L_EFFECT_LONG_DOUBLE_SHARP_CLICK_STRONG_1_100);
-                haptic_play();
+                pulse_both(DRV2605L_EFFECT_LONG_DOUBLE_SHARP_CLICK_STRONG_1_100);
             }
             break;
         case CB_PASTE:
@@ -102,8 +100,7 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
                 register_code16(KC_LCTL);
                 tap_code16(KC_V);
                 unregister_code16(KC_LCTL);
-                drv2605l_pulse(DRV2605L_EFFECT_SOFT_BUMP_100);
-                haptic_play();
+                pulse_both(DRV2605L_EFFECT_SOFT_BUMP_100);
             }
             break;
     }
