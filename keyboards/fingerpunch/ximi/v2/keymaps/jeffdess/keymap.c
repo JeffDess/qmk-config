@@ -16,6 +16,7 @@ enum layer_names {
 #include "macros.c"
 #include "overrides.c"
 #include "combos.c"
+#include "tap-hold.c"
 #include "debug.c"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
