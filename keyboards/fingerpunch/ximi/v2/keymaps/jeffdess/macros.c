@@ -143,7 +143,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case KC_D:
                 if (record->event.pressed) {
                     if ((get_mods() & MOD_MASK_CTRL) || (get_oneshot_mods() & MOD_MASK_CTRL)) {
-                        pulse_left(DRV2605L_EFFECT_STRONG_CLICK_100);
+                        pulse_right(DRV2605L_EFFECT_STRONG_CLICK_100);
                     }
                 }
                 break;
