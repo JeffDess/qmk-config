@@ -1,20 +1,16 @@
 #include QMK_KEYBOARD_H
+#include "jeffdess.h"
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
 #define _QWERTY 0
 #define _SYMB 1
-#define _NAV 2
+#define _NAVI 2
 #define _ADJUST 3
 
 #define _BASE 0
 #define _FN 1
-
-enum custom_keycodes {
-    BASE = SAFE_RANGE,
-    FN,
-};
 
 // Shortcut to make keymap more readable
 // #define SYM_L   MO(_SYMB)
@@ -58,18 +54,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                    KC_TRNS, KC_TRNS, KC_TRNS)};
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-    switch (get_highest_layer(state)) {
-        case _BASE:
-            break;
-        case _FN:
-            break;
-        default:
-            break;
-    }
-    return state;
-}
-
 led_config_t g_led_config = {{{0, 1, 2, 3}},
                              {// LED 对应到物理位置，可以参考下面这个公式
                               // x = 224 / (NUMBER_OF_COLS - 1) * COL_POSITION
@@ -82,21 +66,3 @@ led_config_t g_led_config = {{{0, 1, 2, 3}},
                              },
                              {// 分组，如果没有自己做灯光的需求用处其实不大
                               1, 1, 1, 1}};
-
-void keyboard_post_init_user(void) {
-    // Customise these values to desired behaviour
-    debug_enable = true;
-    debug_matrix = true;
-    // debug_keyboard=true;
-    // debug_mouse=true;
-}
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    // If console is enabled, it will print the matrix position and status of each key pressed
-#ifdef CONSOLE_ENABLE
-    uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, pressed: %u, time: %5u, int: %u, count: %u\n",
-            keycode, record->event.key.col, record->event.key.row, record->event.pressed,
-            record->event.time, record->tap.interrupted, record->tap.count);
-#endif
-    return true;
-}
