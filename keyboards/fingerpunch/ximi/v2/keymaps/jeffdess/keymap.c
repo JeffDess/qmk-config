@@ -1,23 +1,5 @@
 #include QMK_KEYBOARD_H
-
-enum layer_names {
-    _COLEMAK,
-    _ACCENTS,
-    _SYMBOLS,
-    _NAV,
-    _NUMBERS,
-    _MOUSE,
-    _GAME,
-};
-
-#include "keymap_canadian_multilingual.h"
-#include "keycodes.h"
-#include "haptic.c"
-#include "macros.c"
-#include "overrides.c"
-#include "combos.c"
-#include "tap-hold.c"
-#include "debug.c"
+#include "jeffdess.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off

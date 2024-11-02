@@ -1,5 +1,4 @@
-#include <stdint.h>
-#include "drivers/haptic/drv2605l.h"
+#include "haptic_feedback.h"
 
 #ifdef HAPTIC_ENABLE
 #    undef DRV2605L_GREETING

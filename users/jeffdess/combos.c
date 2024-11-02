@@ -1,41 +1,7 @@
 #include <stdint.h>
 #include "drivers/haptic/drv2605l.h"
-#define COMBO_REF_DEFAULT _COLEMAK
-
-uint8_t combo_ref_from_layer(uint8_t layer) {
-    switch (get_highest_layer(layer_state)) {
-        case _SYMBOLS:
-            return _SYMBOLS;
-        case _NAV:
-            return _NAV;
-        default:
-            return _COLEMAK;
-    }
-
-    return layer; // important if default is not in case.
-}
-
-enum combos {
-    CB_COPY,
-    CB_CUT,
-    CB_PASTE,
-    CB_PRINTSCREEN,
-    CB_CAPS_WORD,
-    CB_CAPS_LOCK,
-    CB_TMUX,
-    CB_TMUX_COMMAND,
-    CB_TMUX_SESS,
-    CB_MOUSE_LAYER,
-    CB_GAME_LAYER,
-    CB_FAT_ARROW,
-    CB_ARROW,
-    CB_LTE,
-    CB_GTE,
-    CB_TAB,
-    CB_NAV_TOGGLE,
-    CB_MS_LCLICK,
-    CB_MS_RCLICK
-};
+#include "combos.h"
+#include "haptic_feedback.h"
 
 const uint16_t PROGMEM cut[]          = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM copy[]         = {KC_X, KC_C, COMBO_END};
@@ -104,4 +70,17 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
             }
             break;
     }
+}
+
+uint8_t combo_ref_from_layer(uint8_t layer) {
+    switch (get_highest_layer(layer_state)) {
+        case _SYMBOLS:
+            return _SYMBOLS;
+        case _NAV:
+            return _NAV;
+        default:
+            return _COLEMAK;
+    }
+
+    return layer; // important if default is not in case.
 }

@@ -1,39 +1,9 @@
 #include <stdint.h>
 #include "drivers/haptic/drv2605l.h"
 #include "sendstring_canadian_multilingual.h"
-
-#define SS_CIRC SS_TAP(X_LBRC)
-#define SS_TREM SS_LSFT(SS_TAP(X_LBRC))
+#include "haptic_feedback.h"
 
 uint8_t mod_state;
-enum custom_keycodes {
-    A_CI = SAFE_RANGE,
-    A_GR,
-    E_CI,
-    E_CU,
-    E_GR,
-    E_TR,
-    I_CI,
-    I_TR,
-    O_CI,
-    O_TR,
-    U_CI,
-    U_GR,
-    U_TR,
-    GRAVE,
-    TILDE,
-    CIRC,
-    CEDIL,
-    SLSH_BSLSH,
-    DASH_TILDE,
-    COMMA_DOT,
-    FAT_ARROW,
-    ARROW,
-    GTE,
-    LTE,
-    TMUX_SESSION,
-    TMUX_CMD,
-};
 
 void send_accent(uint16_t keycode, const char *accent, uint8_t mod_state) {
     if (mod_state & MOD_MASK_SHIFT) {
@@ -47,6 +17,10 @@ void send_accent(uint16_t keycode, const char *accent, uint8_t mod_state) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (!process_achordion(keycode, record)) {
+        return false;
+    }
+
     mod_state = get_mods();
     if (record->event.pressed) {
         switch (keycode) {

@@ -36,5 +36,3 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &exclamation_inverted_override,
     &question_mark_inverted_override
 };
-
-
