@@ -1,4 +1,3 @@
-#include <stdint.h>
 #include "drivers/haptic/drv2605l.h"
 #include "sendstring_canadian_multilingual.h"
 #include "haptic_feedback.h"
@@ -17,9 +16,9 @@ void send_accent(uint16_t keycode, const char *accent, uint8_t mod_state) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (!process_achordion(keycode, record)) {
-        return false;
-    }
+    /*if (!process_achordion(keycode, record)) {*/
+    /*    return false;*/
+    /*}*/
 
     mod_state = get_mods();
     if (record->event.pressed) {
