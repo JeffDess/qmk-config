@@ -114,14 +114,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case LCTL_T(KC_S):
                 if (record->event.pressed) {
                     if ((get_mods() & MOD_MASK_CTRL) || (get_oneshot_mods() & MOD_MASK_CTRL)) {
+#ifdef HAPTIC_ENABLE
                         pulse_right(DRV2605L_EFFECT_TRANSITION_CLICK_1_100);
+#endif
                     }
                 }
                 break;
             case KC_D:
                 if (record->event.pressed) {
                     if ((get_mods() & MOD_MASK_CTRL) || (get_oneshot_mods() & MOD_MASK_CTRL)) {
+#ifdef HAPTIC_ENABLE
                         pulse_right(DRV2605L_EFFECT_STRONG_CLICK_100);
+#endif
                     }
                 }
                 break;
