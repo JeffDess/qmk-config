@@ -21,7 +21,6 @@
 #define FP_HAPTIC_CUT_COPY_PASTE
 #define FP_HAPTIC_SAVE
 #define FP_HAPTIC_ENABLE
-#define HAPTIC_FEEDBACK
 
 // Timings
 #undef TAPPING_TERM
