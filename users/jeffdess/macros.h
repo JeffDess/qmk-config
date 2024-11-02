@@ -1,3 +1,5 @@
+#include "features/achordion.h"
+
 #define SS_CIRC SS_TAP(X_LBRC)
 #define SS_TREM SS_LSFT(SS_TAP(X_LBRC))
 
