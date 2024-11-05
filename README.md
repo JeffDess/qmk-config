@@ -3,10 +3,8 @@
 This repository includes my personal QMK keymaps to build firmware for
 keyboards and trackballs:
 
-* [Fingerpunch Ximi v2 Keyboard](keyboards/fingerpunch/ximi/v2/keymaps/jeffdess)
-(build in process, keymap has not been tested correctly yet)
-* [KeyClicks W-Ergolite](keyboards/keyclicks/w_ergolite/keymaps/jeffdess)
-(build in process, currently in default state)
+* [Fingerpunch Ximi v2 Keyboard](keyboards/fingerpunch/ximi/v2/keymaps/jeffdess/readme.md)
+* [KeyClicks W-Ergolite](keyboards/keyclicks/w_ergolite/keymaps/jeffdess) (build in process, currently in default state)
 * [Ploopy Nano Trackball](keyboards/ploopyco/trackball_nano/rev1_001/keymaps/jeffdess)
 
 ## Build
@@ -23,6 +21,7 @@ keyboards and trackballs:
        your shell location.
 1. Compile:
    * `qmk compile -kb fingerpunch/ximi/v2 -km jeffdess`
+   * `qmk compile -kb keyclicks/w_ergolite -km jeffdess`
    * `qmk compile -kb ploopyco/trackball_nano/rev1_001 -km jeffdess`
 
 Alternatively, `qmk userspace-compile` to build all of your userspace targets
