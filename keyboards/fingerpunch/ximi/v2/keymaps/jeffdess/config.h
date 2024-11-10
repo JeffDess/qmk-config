@@ -1,6 +1,5 @@
 #pragma once
 #include "layout.h"
-#include "encoders.h"
 
 #define MASTER_RIGHT
 
@@ -23,3 +22,7 @@
 #define FP_HAPTIC_CUT_COPY_PASTE
 #define FP_HAPTIC_SAVE
 #define FP_HAPTIC_ENABLE
+
+// ENCODERS
+#define FP_ENCODER_ENABLE
+#include "encoders.h"

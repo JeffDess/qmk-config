@@ -10,3 +10,7 @@
 #define THUMB_TAP_TERM 175
 #define HRM_TAP_TERM 280
 #define QUICK_TAP_TERM 175
+
+#ifdef ENCODER_ENABLE
+#    include "encoders.h"
+#endif

@@ -1,5 +1,5 @@
+#ifdef FP_ENCODER_ENABLE
 // clang-format off
-
 // Left Encoder
 #define FP_ENC_0_LAYER_DPI_POINTING   0
 #define FP_ENC_0_LAYER_SCROLL_WHEEL   1
@@ -25,3 +25,5 @@
 #define FP_ENC_1_LAYER_RGB_SAT        8
 #define FP_ENC_1_LAYER_SUPER_TAB      9
 #define FP_ENC_1_LAYER_SUPER_CTRL_TAB 10
+// clang-format on
+#endif // FP_ENCODER_ENABLE
