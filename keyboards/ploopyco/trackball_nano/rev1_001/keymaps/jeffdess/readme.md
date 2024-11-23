@@ -3,6 +3,8 @@
 Ploopy Nano keymap based on [LKBM](https://github.com/ploopyco/qmk-firmware-ploopyco-dev/blob/master/keyboards/ploopyco/trackball_nano/keymaps/lkbm/),
 but with longer timeouts as it's a better fit for [my ZMK Keyboards](https://github.com/JeffDess/zmk-config/).
 
+![Ploopy Nano with Urchin](../../img/urchin-with-nano.jpg)
+
 LKBM's orignal description:
 
 > This keymap lets you send a 2-bit command by having a macro on your keyboard

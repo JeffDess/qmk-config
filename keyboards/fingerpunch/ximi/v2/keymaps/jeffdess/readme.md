@@ -8,6 +8,8 @@ This is my [Ximi](https://fingerpunch.xyz/products/ximi-v2), a 36 keys with a bu
 * Haptic Feedback
 * Hotswap Gateron low-profile switches (KS33)
 
+![Ximi v2](../../img/ximi-face.jpeg)
+
 ## Keymap
 
 The keymap is optimized for software development and French/English typing.
@@ -36,8 +38,11 @@ keymap.
 
 ### Guide
 
-I have followed [Ximi v1 build guide](https://github.com/sadekbaroudi/fingerpunch/blob/master/keyboards/ximi/v1/BUILDGUIDE.md)
-for assembly and soldering the Ximi.
+I have mostly followed [Ximi v1 build guide](https://github.com/sadekbaroudi/fingerpunch/blob/master/keyboards/ximi/v1/BUILDGUIDE.md)
+for assembly and soldering the Ximi. You can see [more pictures in
+img/build](../../img/build)
+
+![Ximi v2](../../img/build/19-soldered_in_case.jpeg)
 
 ### BOM
 
@@ -56,7 +61,7 @@ for assembly and soldering the Ximi.
 | TRRS cable             | 1   | Angled, 60cm. |
 | Rotary encoders        | 2   | EC11 |
 | Rotary encoder caps    | 2   | 14,5mm aluminium found on Ali |
-| Haptic Modules         | 2   | [Pimoroni DRV2605L](https://shop.pimoroni.com/products/drv2605l-linear-actuator-haptic-breakout) |
+| Haptic Modules         | 2   | [Pimoroni DRV2605L](https://shop.pimoroni.com/products/drv2605l-linear-actuator-haptic-breakout). It came with an extra connector on top which can be safely removed. |
 | Trackball Sensors      | 2   | PMW3360DM-T2QU + lens |
 | Trackball PCB          | 2   | [Fingerpunch Store](https://fingerpunch.xyz/product/vik-pmw3360-trackball-module/) |
 | Trackballs             | 2   | 34mm, Perixx Like |
