@@ -1,7 +1,7 @@
 ## Ploopy Nano Keymap
 
 Ploopy Nano keymap based on [LKBM](https://github.com/ploopyco/qmk-firmware-ploopyco-dev/blob/master/keyboards/ploopyco/trackball_nano/keymaps/lkbm/),
-but with longer timeouts as it's a better fit for my ZMK Keyboards.
+but with longer timeouts as it's a better fit for [my ZMK Keyboards](https://github.com/JeffDess/zmk-config/).
 
 LKBM's orignal description:
 
