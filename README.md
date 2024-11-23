@@ -4,8 +4,8 @@ This repository includes my personal QMK keymaps to build firmware for
 keyboards and trackballs:
 
 * [Fingerpunch Ximi v2 Keyboard](keyboards/fingerpunch/ximi/v2/keymaps/jeffdess/readme.md)
-* [KeyClicks W-Ergolite](keyboards/keyclicks/w_ergolite/keymaps/jeffdess) (build in process, currently in default state)
-* [Ploopy Nano Trackball](keyboards/ploopyco/trackball_nano/rev1_001/keymaps/jeffdess)
+* [KeyClicks W-Ergolite](keyboards/keyclicks/w_ergolite/keymaps/jeffdess/readme.md) (WIP)
+* [Ploopy Nano Trackball](keyboards/ploopyco/trackball_nano/rev1_001/keymaps/jeffdess/readme.md)
 
 ## Build
 
