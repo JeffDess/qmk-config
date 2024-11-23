@@ -3,14 +3,30 @@
 This repository includes my personal QMK keymaps to build firmware for
 keyboards and trackballs:
 
-* [Fingerpunch Ximi v2 Keyboard](keyboards/fingerpunch/ximi/v2/keymaps/jeffdess/readme.md)
+* [Fingerpunch Ximi v2](keyboards/fingerpunch/ximi/v2/keymaps/jeffdess/readme.md)
 * [KeyClicks W-Ergolite](keyboards/keyclicks/w_ergolite/keymaps/jeffdess/readme.md) (WIP)
 * [Ploopy Nano Trackball](keyboards/ploopyco/trackball_nano/rev1_001/keymaps/jeffdess/readme.md)
 
-## Build
+![Family photo](keyboards/fingerpunch/ximi/v2/img/family_photo.jpeg)
+> Upper-corners: Ximi - Lower-corners: W-Ergolite - Upper-center: Urchin -
+Lower-center: Corne
+
+> [!note]
+> Urchin and Corne are not in this repo, but with my [ZMK keyboards](https://github.com/JeffDess/zmk-config).
+
+## Userspace
+
+The keymaps are using [QMK userspace](https://docs.qmk.fm/newbs_external_userspace),
+most of the configuration is done on the [`/user`](./users/jeffdess) directory.
+So in order to compile, both this repo and a qmk_firmware repo are required.
+
+### Build
 
 1. Run the normal `qmk setup` procedure if you haven't already done so
   -- see [QMK Docs](https://docs.qmk.fm/#/newbs) for details.
+1. Clone [my qmk_firmware repository](https://github.com/JeffDess/qmk_firmware).
+   It contains base configurations for the keyboards, you must build the user
+   space on top of it as the official qmk_firmware doesn't.
 1. Clone this repository
 1. `cd` into this repository's clone directory
 1. Set global userspace path: `qmk config user.overlay_dir="$(realpath .)"`
