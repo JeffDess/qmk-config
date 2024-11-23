@@ -2,7 +2,7 @@
 
 Here's the my keymap for this 66 keys, wireless split keyboard.
 
-> [!warning] **Disclaimer**
+> [!warning]
 > The keymap compiles, but I have not flashed it yet. The ergolite has a dongle
 > that comes preflashed with Vial firmware, but QMK cannot use this bootloader
 > directly.
