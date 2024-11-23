@@ -19,14 +19,27 @@ The keymap is optimized for software development and French/English typing.
 * Gaming Layer (shifted WASD position, free of homerow mods)
 * Mnemonic key overrides
 
-Also check out my other [ZMK keyboards](https://github.com/JeffDess/zmk-config) based on the same keymap.
-
-<small>
+<p><small>
   NOTE: The keymap is programmed over the Canadian Multilingual Standard (CSA)
   base layout.
-</small>
+</small></p>
 
-## BOM
+Also check out my other [ZMK keyboards](https://github.com/JeffDess/zmk-config)
+based on the same keymap. I haven't set up a keymap drawer for this keymap yet,
+but here's the keymap of my Urchin (I use 34 keys instead of 36 on the Ximi).
+Only difference is the QWERTY and Ergo-L layers that I didn't include on this
+keymap.
+
+![Urchin Keymap drawing](https://github.com/JeffDess/zmk-config/raw/main/images/keymaps/urchin_keymap.svg)
+
+## Building the board
+
+### Guide
+
+I have followed [Ximi v1 build guide](https://github.com/sadekbaroudi/fingerpunch/blob/master/keyboards/ximi/v1/BUILDGUIDE.md)
+for assembly and soldering the Ximi.
+
+### BOM
 
 | Item                   | Qty | Description/Link                         |
 |------------------------|----:|:-----------------------------------------|
@@ -39,17 +52,18 @@ Also check out my other [ZMK keyboards](https://github.com/JeffDess/zmk-config) 
 | Hotswap sockets        | 36  | Gateron KS33 |
 | Keyboard switches      | 36  | [Gateron KS33 Aloe](https://nuphy.com/collections/switches/products/nuphy-aloe-l37-low-profile-switches) (Linear 37gpf) |
 | Keycaps                | 36  | [KLP Lamé MX](https://github.com/braindefender/KLP-Lame-Keycaps) printed with Imagine Black resin |
-| TRRS jacks             | 2   |  |
+| TRRS jacks             | 2   | Included with Ximi PCB |
 | TRRS cable             | 1   | Angled, 60cm. |
 | Rotary encoders        | 2   | EC11 |
-| Rotary encoder caps    | 2   |  |
+| Rotary encoder caps    | 2   | 14,5mm aluminium found on Ali |
 | Haptic Modules         | 2   | [Pimoroni DRV2605L](https://shop.pimoroni.com/products/drv2605l-linear-actuator-haptic-breakout) |
 | Trackball Sensors      | 2   | PMW3360DM-T2QU + lens |
 | Trackball PCB          | 2   | [Fingerpunch Store](https://fingerpunch.xyz/product/vik-pmw3360-trackball-module/) |
 | Trackballs             | 2   | 34mm, Perixx Like |
-| Stainless bearings     | 6   | For static trackball sockets |
+| FPC Cables             | 2   | 10cm ribbon cables for linking PCBs. Incleded with trackball PCB |
+| Stainless bearings     | 6   | For static trackball sockets. Included with Ximi PCB |
 | Heatset inserts        | 14  | M2 6mm (OD 3.5mm). Compression fit, just push them without any heat. Might need some teflon tape for a snug fit in the trackball ones. |
 | Screws                 | 14  | M2 5mm |
-| Tenting legs           | 4   | Laptop legs were slippery, now with trusty 3 positions phone kickstand |
+| Tenting legs           | 4   | Laptop legs were slippery, now with 3 positions phone kickstand |
 | Anti-slip feets        | 4   | Silicone |
 | Electrical tape        |     | Put between haptic modules and encoders |
