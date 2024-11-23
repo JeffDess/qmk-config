@@ -20,3 +20,9 @@
 #define WS2812_DI_PIN D3
 
 #define MIDI_ADVANCED
+
+// Boot mode if pressing down outer thumb key while connecting the keyboard
+#define BOOTMAGIC_ROW_RIGHT 4
+#define BOOTMAGIC_COLUMN_RIGHT 6
+#define BOOTMAGIC_ROW_LEFT 0
+#define BOOTMAGIC_COLUMN_LEFT 6
