@@ -21,10 +21,9 @@ The keymap is optimized for software development and French/English typing.
 * Gaming Layer (shifted WASD position, free of homerow mods)
 * Mnemonic key overrides
 
-<p><small>
-  NOTE: The keymap is programmed over the Canadian Multilingual Standard (CSA)
-  base layout.
-</small></p>
+> [!NOTE]
+> The keymap is programmed over the Canadian Multilingual Standard (CSA)
+> base layout.
 
 Also check out my other [ZMK keyboards](https://github.com/JeffDess/zmk-config)
 based on the same keymap. I haven't set up a keymap drawer for this keyboard yet,
