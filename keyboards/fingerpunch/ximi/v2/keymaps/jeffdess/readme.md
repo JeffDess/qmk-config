@@ -27,14 +27,12 @@ The keymap is optimized for software development and French/English typing.
 </small></p>
 
 Also check out my other [ZMK keyboards](https://github.com/JeffDess/zmk-config)
-based on the same keymap. I haven't set up a keymap drawer for this keymap yet,
-but here's the keymap of my Urchin (I use 34 keys instead of 36 on the Ximi).
-Only difference is the QWERTY and Ergo-L layers that I didn't include on this
-keymap.
+based on the same keymap. I haven't set up a keymap drawer for this keyboard yet,
+but here's the keymap of my Corne which is nearly identical.
 
-![Urchin Keymap drawing](https://github.com/JeffDess/zmk-config/raw/main/images/keymaps/urchin_keymap.svg)
+![Corne Keymap drawing](https://github.com/JeffDess/zmk-config/raw/main/images/keymaps/corne_keymap.svg)
 
-## Building the board
+## Building the keyboard
 
 ### Guide
 
