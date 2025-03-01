@@ -1,5 +1,4 @@
 SRC += jeffdess.c \
-	features/achordion.c \
 	haptic_feedback.c
 
 ALLOW_WARNINGS = no

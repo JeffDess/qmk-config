@@ -21,11 +21,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             keycode, record->event.key.col, record->event.key.row, record->event.pressed,
             record->event.time, record->tap.interrupted, record->tap.count);
 #endif
-    /*if (!process_achordion(keycode, record)) {*/
-    /*    return false;*/
-    /*}*/
 
     mod_state = get_mods();
+
     if (record->event.pressed) {
         switch (keycode) {
             case GRAVE:
