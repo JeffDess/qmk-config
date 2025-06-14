@@ -10,8 +10,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
       in {
-        devShells.default = let keymap-drawer_version = "0.22.0";
-        in pkgs.mkShell {
+        devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             qmk
             dfu-programmer
@@ -24,7 +23,7 @@
           shellHook = ''
             uv venv
             source .venv/bin/activate
-            uv pip install keymap-drawer==${keymap-drawer_version}
+            uv pip install -r requirements.txt
           '';
         };
 
