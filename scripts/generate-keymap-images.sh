@@ -25,7 +25,7 @@ draw () {
     KBD_NAME=$1
     OPT=$2
     if keymap -c "$KMD/config.yaml" \
-        draw "$KMD/$KBD_NAME"_keymap.yaml -j "$KMD"/ximi.json \
+        draw "$KMD/$KBD_NAME"_keymap.yaml "$KMD"/combos.yaml -j "$KMD"/ximi.json \
             -o "$IMG/${KBD_NAME}_keymap.svg" \
         ; then
         echo "Keymap Drawned"

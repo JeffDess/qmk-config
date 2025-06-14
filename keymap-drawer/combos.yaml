@@ -1,0 +1,21 @@
+combos:
+  - {p: [0, 1], k: "$$material:left_click$$", l: ["Colemak"]}
+  - {p: [1, 2], k: "$$scroll$$", l: ["Colemak"]}
+  - {p: [2, 3], k: "$$material:right_click$$", l: ["Colemak"]}
+  - {p: [20, 21], k: "$$tabler:cut$$", l: ["Colemak"]}
+  - {p: [21, 22], k: "$$tabler:copy$$", l: ["Colemak"]}
+  - {p: [22, 23], k: "$$tabler:clipboard$$", l: ["Colemak"]}
+  - {p: [8, 9], k: "$$tabler:camera$$", l: ["Colemak"]}
+  - {p: [34, 35], k: "$$material:keyboard_tab$$", dendron: true, a: "bottom", offset: 0.2, l: ["Colemak"]}
+  - {p: [32, 33], k: "NAV", dendron: true, a: "bottom", offset: 0.2, l: ["Colemak", "Navigation"]}
+  - {p: [12, 13], k: "=>", l: ["Symbols"]}
+  - {p: [22, 23], k: "->", l: ["Symbols"]}
+  - {p: [26, 27], k: "<=", l: ["Symbols"]}
+  - {p: [27, 28], k: ">=", l: ["Symbols"]}
+  - {p: [13, 16], k: "CAPS WORD", draw_separate: true}
+  - {p: [12, 17], k: "CAPS LOCK", draw_separate: true}
+  - {p: [11, 12], k: "TMUX", draw_separate: true}
+  - {p: [11, 12, 19], k: "TMUX CMD", draw_separate: true}
+  - {p: [10, 11, 12], k: "TMUX SESSION", draw_separate: true}
+  - {p: [0, 3], k: "MOUSE TOGGLE", draw_separate: true}
+  - {p: [6, 9], k: "GAME TOGGLE", draw_separate: true, width: 60.0, height: 60.0}
