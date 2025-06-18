@@ -13,21 +13,12 @@ layers:
     - {t: I, h: RALT}
     - {t: O, h: RGUI}
   - [Z, X, C, D, V, K, H, ',', ., OSL( ACCENTS)]
-  - [DPI RESET, '', NAV RET, NUM ESC, BSPC, SYM SP, '', MUTE, UNDO, REDO2]
-  - [REDO, VOLD, MUTE, VOLU]
+  - [DPI RESET, '', NAV RET, NUM ESC, '$$material:backspace$$', SYM SP, '', '$$tabler-o:volume-3$$', '$$tabler-o:arrow-back-up$$', '$$tabler-o:arrow-forward-up$$']
+  - ['$$tabler-o:arrow-forward-up$$', '$$tabler-o:volume-2$$', '$$tabler-o:volume-3$$', '$$tabler-o:volume$$']
   Colemak Accents:
-  - [CA TILD, CA ACUT, E TR, '', '', '', I TR, O TR, U TR, CA DIAE]
-  - - A GR
-    - E CI
-    - E CU
-    - {t: E GR, h: LSFT}
-    - ''
-    - ''
-    - {t: I CI, h: RSFT}
-    - O CI
-    - U CI
-    - CA GRV
-  - [A CI, '', CEDIL, '', '', '', '', '', U GR, CA CIRC]
+  - ['~', ´, Ë, '', '', '', Ï, Ö, Ü, ¨]
+  - [À, Ê, É, È, '', '', Î, Ô, Û, '`']
+  - [Â, '', Ç, '', '', '', '', '', Ù, ^]
   - - HF TOGG
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -43,9 +34,18 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Symbols:
-  - [CA HASH, CA AT, CA LCBR, CA RCBR, CA PLUS, '', '~', '`', CA DLR, '']
-  - [CA SLSH, CA MINS, CA LPRN, CA RPRN, CA EQL, ^, CA QUES, CA EXLM, CA AMPR, CA PIPE]
-  - [CA ASTR, CA PERC, CA LBRC, CA RBRC, CA UNDS, '', CA LABK, CA RABK, CA LDAQ, CA RDAQ]
+  - ['#', '@', '{', '}', +, '', '~', '`', $, '']
+  - - {t: /, s: \}
+    - {t: '-', s: '~'}
+    - (
+    - )
+    - '='
+    - ^
+    - {t: '?', s: ¿}
+    - {t: '!', s: ¡}
+    - '&'
+    - '|'
+  - ['*', '%', '[', ']', _, '', <, '>', «, »]
   - - ZOOM RESET
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -63,24 +63,24 @@ layers:
   Navigation:
   - ['', '', '', '', '', '', '', '', '', '']
   - - {t: LGUI, h: sticky}
-    - MPRV
-    - MPLY
-    - MNXT
+    - $$tabler:player-track-prev$$
+    - $$play-pause$$
+    - $$tabler:player-track-next$$
     - ''
-    - LEFT
-    - DOWN
-    - UP
-    - RIGHT
+    - $$tabler:arrow-big-left$$
+    - $$tabler:arrow-big-down$$
+    - $$tabler:arrow-big-up$$
+    - $$tabler:arrow-big-right$$
     - INSERT
-  - ['', '', VOLD, VOLU, '', HOME, PAGE UP, PAGE DOWN, END, SCROLL LOCK]
-  - - MUTE
+  - ['', '', '$$tabler-o:volume-2$$', '$$tabler-o:volume$$', '', HOME, PAGE UP, PAGE DOWN, END, SCROLL LOCK]
+  - - $$tabler-o:volume-3$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - MUTE
+    - $$tabler-o:volume-3$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
@@ -88,18 +88,18 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Numbers:
-  - [F1, F2, F3, F4, CA PLMN, CA QRTR, '7', '8', '9', CA ASTR]
+  - [F1, F2, F3, F4, ±, ¼, '7', '8', '9', '*']
   - - F5
     - F6
     - F7
     - {t: F8, h: LSFT}
-    - CA DEG
-    - CA HALF
+    - °
+    - ½
     - '4'
     - '5'
     - '6'
-    - CA PLUS
-  - [F9, F10, F11, F12, CA MICR, CA TQTR, '1', '2', '3', ',']
+    - +
+  - [F9, F10, F11, F12, µ, ¾, '1', '2', '3', ',']
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -116,12 +116,12 @@ layers:
     - {t: ▽, type: trans}
   Mouse:
   - ['', '', '', '', '', '', '', '', '', '']
-  - ['', MS WH LEFT, MS WH UP, MS WH DOWN, MS WH RIGHT, MS LEFT, MS DOWN, MS UP, MS RIGHT, '']
+  - ['', $$scroll-left$$, $$scroll-up$$, $$scroll-down$$, $$scroll-right$$, $$cursor-left$$, $$cursor-down$$, $$cursor-up$$, $$cursor-right$$, '']
   - ['', LALT, LCTL, LSFT, '', '', LSFT, LCTL, LALT, '']
   - - DPI RESET
     - {t: ▽, type: trans}
-    - MS BTN1
-    - MS BTN2
+    - $$material:right_click$$
+    - $$material:left_click$$
     - ''
     - ''
     - {t: ▽, type: trans}
@@ -133,12 +133,12 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Game:
-  - [TAB, Q, W, E, R, MS BTN1, MS BTN2, MS BTN3, '', LALT]
+  - ['$$material:keyboard_tab$$', Q, W, E, R, '$$material:right_click$$', '$$material:left_click$$', $$click-middle$$, '', LALT]
   - [LSFT, A, S, D, F, '1', '2', '3', '4', '5']
   - [LCTL, Z, X, C, V, '6', '7', '8', '9', '0']
   - - {t: ▽, type: trans}
-    - BSPC
-    - SPACE
+    - $$material:backspace$$
+    - $$tabler:space$$
     - RETURN
     - ESC
     - M
