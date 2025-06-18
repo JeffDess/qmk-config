@@ -8,7 +8,7 @@ parse () {
     KBD_NAME=$1
 
     qmk c2json -kb fingerpunch/ximi/v2 -km jeffdess --no-cpp | \
-        keymap parse -c 10 -q - -o keymap-drawer/"$KBD_NAME"_keymap.yaml \
+        keymap -c "$KMD/config.yaml" parse -c 10 -q - -o keymap-drawer/"$KBD_NAME"_keymap.yaml \
         -l \
         "Colemak"\
         "Colemak Accents"\
