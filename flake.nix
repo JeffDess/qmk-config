@@ -19,6 +19,7 @@
             gcc
             python313
             uv
+            entr
           ];
           shellHook = ''
             uv venv
