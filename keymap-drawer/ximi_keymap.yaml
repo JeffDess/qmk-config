@@ -90,7 +90,7 @@ layers:
     - $$tabler:arrow-big-up$$
     - $$tabler:arrow-big-right$$
     - INSERT
-  - ['', '', '$$tabler-o:volume-2$$', '$$tabler-o:volume$$', '', HOME, PAGE UP, PAGE DOWN, END, SCROLL LOCK]
+  - ['', '', '$$tabler-o:volume-2$$', '$$tabler-o:volume$$', '', HOME, PAGE DOWN, PAGE UP, END, SCROLL LOCK]
   - - {t: '$$tabler-o:volume-3$$', type: encoder}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
