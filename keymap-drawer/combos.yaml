@@ -1,0 +1,35 @@
+combos:
+  - {p: [0, 1], k: "$$material:left_click$$", l: ["Colemak"]}
+  - {p: [1, 2], k: "$$scroll$$", l: ["Colemak"]}
+  - {p: [2, 3], k: "$$material:right_click$$", l: ["Colemak"]}
+  - {p: [20, 21], k: "$$tabler:cut$$", l: ["Colemak"]}
+  - {p: [21, 22], k: "$$tabler:copy$$", l: ["Colemak"]}
+  - {p: [22, 23], k: "$$tabler:clipboard$$", l: ["Colemak"]}
+  - {p: [8, 9], k: "$$tabler:camera$$", l: ["Colemak"]}
+  - {p: [34, 35], k: "$$material:keyboard_tab$$", dendron: true, a: "bottom", offset: 0.32, l: ["Colemak"]}
+  - {p: [32, 33], k: "NAV", dendron: true, a: "bottom", offset: 0.32, l: ["Colemak", "Navigation"]}
+  - {p: [12, 13], k: "=>", l: ["Symbols"]}
+  - {p: [22, 23], k: "->", l: ["Symbols"]}
+  - {p: [26, 27], k: "<=", l: ["Symbols"]}
+  - {p: [27, 28], k: ">=", l: ["Symbols"]}
+  - {p: [13, 16], k: "CAPS WORD", draw_separate: true}
+  - {p: [12, 17], k: "CAPS LOCK", draw_separate: true}
+  - {p: [11, 12], k: "TMUX", draw_separate: true}
+  - {p: [11, 12, 19], k: "TMUX CMD", draw_separate: true}
+  - {p: [10, 11, 12], k: "TMUX SESSION", draw_separate: true}
+  - {p: [0, 3], k: "MOUSE TOGGLE", draw_separate: true}
+  - {p: [6, 9], k: "GAME TOGGLE", draw_separate: true, type: 'rect.key'}
+  - {p: [37, 37], k: "Vol -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Colemak"]}
+  - {p: [30, 30], k: "DPI -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Colemak"]}
+  - {p: [30, 30], k: "SCROLL -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Accents"]}
+  - {p: [37, 37], k: "RGB -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Accents"]}
+  - {p: [30, 30], k: "ZOOM -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Symbols"]}
+  - {p: [37, 37], k: "PAGE -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Symbols"]}
+  - {p: [30, 30], k: "PAGE -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Navigation"]}
+  - {p: [37, 37], k: "ZOOM -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Navigation"]}
+  - {p: [30, 30], k: "VOL -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Numbers"]}
+  - {p: [37, 37], k: "DPI -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Numbers"]}
+  - {p: [30, 30], k: "RGB MODE", dendron: true, a: 'bottom', offset: 0.5, l: ["Mouse"]}
+  - {p: [37, 37], k: "SCROLL -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Mouse"]}
+  - {p: [30, 30], k: "RGB SAT", dendron: true, a: 'bottom', offset: 0.5, l: ["Game"]}
+  - {p: [37, 37], k: "RGB HUE", dendron: true, a: 'bottom', offset: 0.5, l: ["Game"]}

@@ -1,0 +1,203 @@
+{
+    "manufacturer": "sadekbaroudi",
+    "keyboard_name": "ximi v2",
+    "maintainer": "Sadek Baroudi <sadekbaroudi@gmail.com>",
+    "audio": {
+        "voices": true
+    },
+    "bootloader": "rp2040",
+    "bootmagic": {
+        "enabled": true
+    },
+    "debounce": 5,
+    "diode_direction": "COL2ROW",
+    "encoder": {
+        "enabled": true,
+        "rotary": [
+            {"pin_a": "GP7", "pin_b": "GP8"}
+        ]
+    },
+    "features": {
+        "audio": false,
+        "backlight": false,
+        "bluetooth": false,
+        "bootmagic": true,
+        "cirque": true,
+        "command": false,
+        "console": false,
+        "encoder": true,
+        "extrakey": true,
+        "fauxclicky": false,
+        "haptic": true,
+        "midi": false,
+        "mousekey": true,
+        "nkro": false,
+        "pmw3360": true,
+        "rgb_matrix": false,
+        "rgblight": false,
+        "sleep_led": false,
+        "split_activity": true,
+        "split_haptic": true,
+        "unicode": false,
+        "vik": true
+    },
+    "matrix_pins": {
+        "cols": ["GP10", "GP11", "GP6", "GP12", "GP13", "GP14", "GP15", "GP16"],
+        "rows": ["GP29", "GP4", "GP5", "GP24"]
+    },
+    "mouse_key": {
+        "enabled": true
+    },
+    "processor": "RP2040",
+    "qmk": {
+        "locking": {
+            "enabled": true,
+            "resync": true
+        }
+    },
+    "rgb_matrix": {
+        "driver": "ws2812",
+        "max_brightness": 130,
+        "sleep": true,
+        "split_count": [21, 21]
+    },
+    "rgblight": {
+        "brightness_steps": 16,
+        "hue_steps": 16,
+        "led_count": 42,
+        "max_brightness": 130,
+        "saturation_steps": 16,
+        "sleep": true,
+        "split": true,
+        "split_count": [21, 21]
+    },
+    "split": {
+        "bootmagic": {
+            "matrix": [4, 6]
+        },
+        "enabled": true,
+        "transport": {
+            "protocol": "serial",
+            "sync": {
+                "haptic": true,
+                "layer_state": true,
+                "matrix_state": true,
+                "modifiers": true
+            }
+        }
+    },
+    "url": "https://fingerpunch.xyz/product/ximi-v2/",
+    "usb": {
+        "device_version": "2.0.0",
+        "pid": "0xB171",
+        "vid": "0xFEFE"
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP25"
+    },
+    "layouts": {
+        "LAYOUT_5col": {
+            "layout": [
+                {"label": "K00", "matrix": [0, 1], "x": 0, "y": 0},
+                {"label": "K01", "matrix": [0, 2], "x": 1, "y": 0},
+                {"label": "K02", "matrix": [0, 3], "x": 2, "y": 0},
+                {"label": "K03", "matrix": [0, 4], "x": 3, "y": 0},
+                {"label": "K04", "matrix": [0, 5], "x": 4, "y": 0},
+                {"label": "K34", "matrix": [4, 5], "x": 5, "y": 0},
+                {"label": "K33", "matrix": [4, 4], "x": 6, "y": 0},
+                {"label": "K32", "matrix": [4, 3], "x": 7, "y": 0},
+                {"label": "K31", "matrix": [4, 2], "x": 8, "y": 0},
+                {"label": "K30", "matrix": [4, 1], "x": 9, "y": 0},
+                {"label": "K10", "matrix": [1, 1], "x": 10, "y": 0},
+                {"label": "K11", "matrix": [1, 2], "x": 11, "y": 0},
+                {"label": "K12", "matrix": [1, 3], "x": 12, "y": 0},
+                {"label": "K13", "matrix": [1, 4], "x": 13, "y": 0},
+                {"label": "K14", "matrix": [1, 5], "x": 14, "y": 0},
+                {"label": "K44", "matrix": [5, 5], "x": 15, "y": 0},
+                {"label": "K43", "matrix": [5, 4], "x": 16, "y": 0},
+                {"label": "K42", "matrix": [5, 3], "x": 17, "y": 0},
+                {"label": "K41", "matrix": [5, 2], "x": 18, "y": 0},
+                {"label": "K40", "matrix": [5, 1], "x": 19, "y": 0},
+                {"label": "K20", "matrix": [2, 1], "x": 20, "y": 0},
+                {"label": "K21", "matrix": [2, 2], "x": 21, "y": 0},
+                {"label": "K22", "matrix": [2, 3], "x": 22, "y": 0},
+                {"label": "K23", "matrix": [2, 4], "x": 23, "y": 0},
+                {"label": "K24", "matrix": [2, 5], "x": 24, "y": 0},
+                {"label": "K54", "matrix": [6, 5], "x": 25, "y": 0},
+                {"label": "K53", "matrix": [6, 4], "x": 26, "y": 0},
+                {"label": "K52", "matrix": [6, 3], "x": 27, "y": 0},
+                {"label": "K51", "matrix": [6, 2], "x": 28, "y": 0},
+                {"label": "K50", "matrix": [6, 1], "x": 29, "y": 0},
+                {"label": "K98", "matrix": [3, 2], "x": 30, "y": 0},
+                {"label": "K06", "matrix": [0, 6], "x": 31, "y": 0},
+                {"label": "K16", "matrix": [1, 6], "x": 32, "y": 0},
+                {"label": "K26", "matrix": [2, 6], "x": 33, "y": 0},
+                {"label": "K56", "matrix": [6, 6], "x": 34, "y": 0},
+                {"label": "K46", "matrix": [5, 6], "x": 35, "y": 0},
+                {"label": "K36", "matrix": [4, 6], "x": 36, "y": 0},
+                {"label": "K99", "matrix": [7, 2], "x": 37, "y": 0},
+                {"label": "K07", "matrix": [0, 7], "x": 38, "y": 0},
+                {"label": "K17", "matrix": [1, 7], "x": 39, "y": 0},
+                {"label": "K27", "matrix": [2, 7], "x": 40, "y": 0},
+                {"label": "K37", "matrix": [4, 7], "x": 41, "y": 0},
+                {"label": "K47", "matrix": [5, 7], "x": 42, "y": 0},
+                {"label": "K57", "matrix": [6, 7], "x": 43, "y": 0}
+            ]
+        },
+        "LAYOUT_6col": {
+            "layout": [
+                {"label": "K00", "matrix": [0, 0], "x": 0, "y": 0},
+                {"label": "K01", "matrix": [0, 1], "x": 1, "y": 0},
+                {"label": "K02", "matrix": [0, 2], "x": 2, "y": 0},
+                {"label": "K03", "matrix": [0, 3], "x": 3, "y": 0},
+                {"label": "K04", "matrix": [0, 4], "x": 4, "y": 0},
+                {"label": "K05", "matrix": [0, 5], "x": 5, "y": 0},
+                {"label": "K35", "matrix": [4, 5], "x": 6, "y": 0},
+                {"label": "K34", "matrix": [4, 4], "x": 7, "y": 0},
+                {"label": "K33", "matrix": [4, 3], "x": 8, "y": 0},
+                {"label": "K32", "matrix": [4, 2], "x": 9, "y": 0},
+                {"label": "K31", "matrix": [4, 1], "x": 10, "y": 0},
+                {"label": "K30", "matrix": [4, 0], "x": 11, "y": 0},
+                {"label": "K10", "matrix": [1, 0], "x": 12, "y": 0},
+                {"label": "K11", "matrix": [1, 1], "x": 13, "y": 0},
+                {"label": "K12", "matrix": [1, 2], "x": 14, "y": 0},
+                {"label": "K13", "matrix": [1, 3], "x": 15, "y": 0},
+                {"label": "K14", "matrix": [1, 4], "x": 16, "y": 0},
+                {"label": "K15", "matrix": [1, 5], "x": 17, "y": 0},
+                {"label": "K45", "matrix": [5, 5], "x": 18, "y": 0},
+                {"label": "K44", "matrix": [5, 4], "x": 19, "y": 0},
+                {"label": "K43", "matrix": [5, 3], "x": 20, "y": 0},
+                {"label": "K42", "matrix": [5, 2], "x": 21, "y": 0},
+                {"label": "K41", "matrix": [5, 1], "x": 22, "y": 0},
+                {"label": "K40", "matrix": [5, 0], "x": 23, "y": 0},
+                {"label": "K20", "matrix": [2, 0], "x": 24, "y": 0},
+                {"label": "K21", "matrix": [2, 1], "x": 25, "y": 0},
+                {"label": "K22", "matrix": [2, 2], "x": 26, "y": 0},
+                {"label": "K23", "matrix": [2, 3], "x": 27, "y": 0},
+                {"label": "K24", "matrix": [2, 4], "x": 28, "y": 0},
+                {"label": "K25", "matrix": [2, 5], "x": 29, "y": 0},
+                {"label": "K55", "matrix": [6, 5], "x": 30, "y": 0},
+                {"label": "K54", "matrix": [6, 4], "x": 31, "y": 0},
+                {"label": "K53", "matrix": [6, 3], "x": 32, "y": 0},
+                {"label": "K52", "matrix": [6, 2], "x": 33, "y": 0},
+                {"label": "K51", "matrix": [6, 1], "x": 34, "y": 0},
+                {"label": "K50", "matrix": [6, 0], "x": 35, "y": 0},
+                {"label": "K98", "matrix": [3, 2], "x": 36, "y": 0},
+                {"label": "K06", "matrix": [0, 6], "x": 37, "y": 0},
+                {"label": "K16", "matrix": [1, 6], "x": 38, "y": 0},
+                {"label": "K26", "matrix": [2, 6], "x": 39, "y": 0},
+                {"label": "K56", "matrix": [6, 6], "x": 40, "y": 0},
+                {"label": "K46", "matrix": [5, 6], "x": 41, "y": 0},
+                {"label": "K36", "matrix": [4, 6], "x": 42, "y": 0},
+                {"label": "K99", "matrix": [7, 2], "x": 43, "y": 0},
+                {"label": "K07", "matrix": [0, 7], "x": 44, "y": 0},
+                {"label": "K17", "matrix": [1, 7], "x": 45, "y": 0},
+                {"label": "K27", "matrix": [2, 7], "x": 46, "y": 0},
+                {"label": "K57", "matrix": [6, 7], "x": 47, "y": 0},
+                {"label": "K47", "matrix": [5, 7], "x": 48, "y": 0},
+                {"label": "K37", "matrix": [4, 7], "x": 49, "y": 0}
+            ]
+        }
+    }
+}

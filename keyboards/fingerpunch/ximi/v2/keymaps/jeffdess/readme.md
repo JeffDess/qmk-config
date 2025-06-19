@@ -25,11 +25,10 @@ The keymap is optimized for software development and French/English typing.
 > The keymap is programmed over the Canadian Multilingual Standard (CSA)
 > base layout.
 
-Also check out my other [ZMK keyboards](https://github.com/JeffDess/zmk-config)
-based on the same keymap. I haven't set up a keymap drawer for this keyboard yet,
-but here's the keymap of my Corne which is nearly identical.
+![Ximi Keymap drawing](./keymap.svg)
 
-![Corne Keymap drawing](https://github.com/JeffDess/zmk-config/raw/main/images/keymaps/corne_keymap.svg)
+Also check out my other [ZMK keyboards](https://github.com/JeffDess/zmk-config)
+based on the same keymap.
 
 ## Building the keyboard
 

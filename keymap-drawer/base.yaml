@@ -1,0 +1,17 @@
+layout: {qmk_keyboard: fingerpunch/ximi/v2, layout_name: LAYOUT_5col}
+layers:
+  Colemak:
+    - ['', '', '', '', '', '', '', '', '', '']
+    - ['', '', '', '', '', '', '', '', '', '']
+    - ['', '', '', '', '', '', '', '', '', '']
+    - -
+      - "BOOT MAGIC"
+      -
+      -
+      -
+      -
+      - "BOOT MAGIC"
+      -
+      -
+      -
+    - ['', '', '', '']
