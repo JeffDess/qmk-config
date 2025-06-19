@@ -404,121 +404,40 @@ draw_config:
 parse_config:
   preprocess: true
   skip_binding_parsing: false
-  raw_binding_map: {
-    A_CI: "Â",
-    A_GR: "À",
-    CEDIL: "Ç",
-    E_CI: "Ê",
-    E_CU: "É",
-    LSFT_T(E_GR): "È",
-    E_TR: "Ë",
-    RSFT_T(I_CI): "Î",
-    I_TR: "Ï",
-    OE_L: "Œ",
-    O_CI: "Ô",
-    O_TR: "Ö",
-    U_CI: "Û",
-    U_GR: "Ù",
-    U_TR: "Ü",
-    OSL(_ACCENTS): {t: "Accents", h: "TOGGLE"},
-    SYM_SP: {t: '$$tabler:space$$', h: "Symbols", s: "$$nbsp$$"},
-    NUM_ESC: {t: 'ESC', h: 'Numbers', s: '$$material:left_click$$'},
-    NAV_RET: {t: '$$material:keyboard_return$$', h: 'Nav'},
-    HF_TOGG: {t: 'HAPTIC', h: 'TOGGLE'},
-    RGB_TOG: {t: 'RGB', h: 'TOGGLE'},
-    TO(_COLEMAK): {t: 'COLEMAK', h: 'TOGGLE'},
-    "hrme SL 0": "È",
-    "hrmeg SL 0": "È",
-    "hrmi SL 0": "Î",
-    "hrmic SL 0": "Î",
-    "AE_L 2": "Æ",
-    "A_CI 2": "Â",
-    "A_GR 2": "À",
-    "CEDIL 2": "Ç",
-    "E_CI 2": "Ê",
-    "E_CU 2": "É",
-    "E_GR 2": "È",
-    "E_TR 2": "Ë",
-    "I_CI 2": "Î",
-    "I_TR 2": "Ï",
-    "KPT ACC_CI 2": "^",
-    "KPT ACC_GR 2": "`",
-    "KPT ACC_TR 2": "¨",
-    "OE_L 2": "Œ",
-    "O_CI 2": "Ô",
-    "O_TR 2": "Ö",
-    "U_CI 2": "Û",
-    "U_GR 2": "Ù",
-    "U_TR 2": "Ü",
-    "hrme SL 2": "È",
-    "hrmi SL 2": "Î",
-    "A_GR 4": "À",
-    "A_CI 4": "Â",
-    "hrme SL 4": "È",
-    "hrmec SL 4": "Ê",
-    "hrmiq SL 2": "Î",
-    "AE_L 4": "Æ",
-    "CEDIL 4": "Ç",
-    "E_CI 4": "Ê",
-    "E_CU 4": "É",
-    "E_GR 4": "È",
-    "E_TR 4": "Ë",
-    "I_CI 4": "Î",
-    "I_TR 4": "Ï",
-    "KPT ACC_CI 4": "^",
-    "KPT ACC_GR 4": "`",
-    "KPT ACC_TR 4": "¨",
-    "kp INV_QUEST": "¿",
-    "kp INV_EXCL": "¡",
-    "OE_L 4": "Œ",
-    "O_CI 4": "Ô",
-    "O_TR 4": "Ö",
-    "U_CI 4": "Û",
-    "U_GR 4": "Ù",
-    "U_TR 4": "Ü",
-    "kp QUEST": "?",
-    "kp RA(COMMA)": "<",
-    "kp RA(DOT)": ">",
-    "GRA": "`",
-    "CAR": "^",
-    "kp LBRAC": "{",
-    "kp RBRAC": "}",
-    "kp LBKET": "[",
-    "kp RBKET": "]",
-    "kp PIP": "|",
-    "kp LAQUO": "«",
-    "kp RAQUO": "»",
-    "kp MATH_1_2": "½",
-    "kp MATH_3_4": "¾",
-    "kp MATH_PM": "±",
-    "kp DEG": "°",
-    "kp RA(RBKT)": "~",
-    "kp MATH_MICRO": "µ",
-    "mmv_dpi": "DPI",
-    "mkp_boot": "QMK BOOT",
-    "mwh_tg": "$$scroll$$",
-    "caps_word": "CAPS WORD",
-    "caps_lock": "CAPS LOCK",
-    "kp LC(X)": "$$tabler:cut$$",
-    "kp LC(C)": "$$tabler:copy$$",
-    "kp LC(V)": "$$tabler:clipboard$$",
-    "kp LC(LA(J))": "TMUX",
-    "TMUX_SESSION": "TMUX NEW SESSION",
-    "TMUX_CMD": "TMUX COMMAND",
-    "LTE": " <= ",
-    "GTE": " >= ",
-    "ARROW": " -> ",
-    "FAT_ARROW": " => ",
-    "kp RA(SPACE)": "$$nbsp$$",
-    "out OUT_TOG": '$$output-toggle$$',
-    "kp SAPOS": "'",
-    "kp DAPOS": '"',
-    "soft_off": "$$mdi:power-standby$$",
-    "tog NAV": "NAV",
-    UNDO: "$$tabler-o:arrow-back-up$$",
-    REDO: "$$tabler-o:arrow-forward-up$$",
+  raw_binding_map:
+    ARROW: " -> "
+    A_CI: "Â"
+    A_GR: "À"
+    CAR: "^"
+    CEDIL: "Ç"
+    E_CI: "Ê"
+    E_CU: "É"
+    E_TR: "Ë"
+    FAT_ARROW: " => "
+    GRA: "`"
+    GTE: " >= "
+    HF_TOGG: {t: 'HAPTIC', h: 'TOGGLE'}
+    I_TR: "Ï"
+    LSFT_T(E_GR): "È"
+    LTE: " <= "
+    NAV_RET: {t: '$$material:keyboard_return$$', h: 'Nav'}
+    NUM_ESC: {t: 'ESC', h: 'Numbers', s: '$$material:left_click$$'}
+    OE_L: "Œ"
+    OSL(_ACCENTS): {t: "Accents", h: "TOGGLE"}
+    O_CI: "Ô"
+    O_TR: "Ö"
     REDO2: "$$tabler-o:arrow-forward-up$$"
-  }
+    REDO: "$$tabler-o:arrow-forward-up$$"
+    RGB_TOG: {t: 'RGB', h: 'TOGGLE'}
+    RSFT_T(I_CI): "Î"
+    SYM_SP: {t: '$$tabler:space$$', h: "Symbols", s: "$$nbsp$$"}
+    TMUX_CMD: "TMUX COMMAND"
+    TMUX_SESSION: "TMUX NEW SESSION"
+    TO(_COLEMAK): {t: 'COLEMAK', h: 'TOGGLE'}
+    UNDO: "$$tabler-o:arrow-back-up$$"
+    U_CI: "Û"
+    U_GR: "Ù"
+    U_TR: "Ü"
   sticky_label: sticky
   toggle_label: toggle
   trans_legend:
