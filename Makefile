@@ -17,6 +17,9 @@ endif
 
 drawing:
 	@./scripts/generate-keymap-images.sh
+
 preview:
 	@./scripts/generate-keymap-images.sh -p
 
+watch:
+	@find ./keymap-drawer/ | entr -s "make preview"
