@@ -33,8 +33,10 @@ draw_config:
         fill: inherit;
     }
 
-    .keypos-30 rect,
-    .keypos-37 rect,
+    g:not([class^="layer-combopos-"])>g .keypos-30 rect,
+    g:not([class^="layer-combopos-"])>g .keypos-37 rect,
+    [class^="layer-combopos-"] .keypos-31 rect,
+    [class^="layer-combopos-"] .keypos-38 rect,
     rect.encoder {
         rx: 50%;
         ry: 50%;
