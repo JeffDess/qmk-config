@@ -87,8 +87,18 @@ draw_config:
     }
 
     /* color accent for held keys */
+    .layer-Symbols .keypos-35 rect,
+    .layer-Navigation .keypos-32 rect,
+    .layer-Numbers .keypos-33 rect,
     rect.held, rect.combo.held {
         fill: #FF9E3B;
+    }
+
+    .layer-Symbols .keypos-35 text,
+    .layer-Navigation .keypos-32 text,
+    .layer-Numbers .keypos-33 text,
+    text.held, text.combo.held {
+        display: none;
     }
 
     /* color accent for ghost (optional) keys */
