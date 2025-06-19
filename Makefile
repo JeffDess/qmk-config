@@ -1,4 +1,5 @@
 .SILENT:
+.PHONY: drawing preview watch
 
 MAKEFLAGS += --no-print-directory
 
