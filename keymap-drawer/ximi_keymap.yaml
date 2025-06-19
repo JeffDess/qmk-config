@@ -12,21 +12,39 @@ layers:
     - {t: E, h: LCTL}
     - {t: I, h: RALT}
     - {t: O, h: RGUI}
-  - [Z, X, C, D, V, K, H, ',', ., OSL( ACCENTS)]
-  - [DPI RESET, '', NAV RET, NUM ESC, '$$material:backspace$$', SYM SP, '', '$$tabler-o:volume-3$$', '$$tabler-o:arrow-back-up$$', '$$tabler-o:arrow-forward-up$$']
+  - - Z
+    - X
+    - C
+    - D
+    - V
+    - K
+    - H
+    - ','
+    - .
+    - {t: Accents, h: TOGGLE}
+  - - DPI RESET
+    - BOOT MAGIC
+    - {t: '$$material:keyboard_return$$', h: Nav}
+    - {t: ESC, h: Numbers, s: '$$material:left_click$$'}
+    - {t: '$$material:backspace$$', s: $$delete$$}
+    - {t: '$$tabler:space$$', h: Symbols, s: $$nbsp$$}
+    - BOOT MAGIC
+    - $$tabler-o:volume-3$$
+    - $$tabler-o:arrow-back-up$$
+    - $$tabler-o:arrow-forward-up$$
   - ['$$tabler-o:arrow-forward-up$$', '$$tabler-o:volume-2$$', '$$tabler-o:volume-3$$', '$$tabler-o:volume$$']
-  Colemak Accents:
+  Accents:
   - ['~', ´, Ë, '', '', '', Ï, Ö, Ü, ¨]
   - [À, Ê, É, È, '', '', Î, Ô, Û, '`']
   - [Â, '', Ç, '', '', '', '', '', Ù, ^]
-  - - HF TOGG
+  - - {t: HAPTIC, h: TOGGLE}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - TO( COLEMAK)
+    - {t: COLEMAK, h: TOGGLE}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - RGB TOG
+    - {t: RGB, h: TOGGLE}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
@@ -137,9 +155,9 @@ layers:
   - [LSFT, A, S, D, F, '1', '2', '3', '4', '5']
   - [LCTL, Z, X, C, V, '6', '7', '8', '9', '0']
   - - {t: ▽, type: trans}
-    - $$material:backspace$$
+    - {t: '$$material:backspace$$', s: $$delete$$}
     - $$tabler:space$$
-    - RETURN
+    - $$material:keyboard_return$$
     - ESC
     - M
     - I
