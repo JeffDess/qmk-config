@@ -37,7 +37,7 @@ draw () {
 
 launch_preview () {
    echo "Launching preview in Firefox"
-   firefox doc/img/keymaps/ximi_keymap.svg &
+   firefox "$IMG"/keymap.svg &
 }
 
 init() {
