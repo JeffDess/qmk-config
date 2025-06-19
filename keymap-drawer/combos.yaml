@@ -6,8 +6,8 @@ combos:
   - {p: [21, 22], k: "$$tabler:copy$$", l: ["Colemak"]}
   - {p: [22, 23], k: "$$tabler:clipboard$$", l: ["Colemak"]}
   - {p: [8, 9], k: "$$tabler:camera$$", l: ["Colemak"]}
-  - {p: [34, 35], k: "$$material:keyboard_tab$$", dendron: true, a: "bottom", offset: 0.2, l: ["Colemak"]}
-  - {p: [32, 33], k: "NAV", dendron: true, a: "bottom", offset: 0.2, l: ["Colemak", "Navigation"]}
+  - {p: [34, 35], k: "$$material:keyboard_tab$$", dendron: true, a: "bottom", offset: 0.32, l: ["Colemak"]}
+  - {p: [32, 33], k: "NAV", dendron: true, a: "bottom", offset: 0.32, l: ["Colemak", "Navigation"]}
   - {p: [12, 13], k: "=>", l: ["Symbols"]}
   - {p: [22, 23], k: "->", l: ["Symbols"]}
   - {p: [26, 27], k: "<=", l: ["Symbols"]}

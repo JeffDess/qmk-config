@@ -874,16 +874,16 @@ path.combo {
 <use href="#tabler:camera" xlink:href="#tabler:camera" x="665" y="53" height="14" width="14.0" class="combo tap glyph tabler:camera"/>
 </g>
 <g class="combo combopos-7">
-<path d="M448,282 h-22 a6.0,6.0 0 0 1 -6.0,-6.0 v-12" class="combo"/>
-<path d="M448,282 h22 a6.0,6.0 0 0 0 6.0,-6.0 v-22" class="combo"/>
-<rect rx="8" ry="8" x="432" y="266" width="32" height="32" class="combo"/>
-<use href="#material:keyboard_tab" xlink:href="#material:keyboard_tab" x="441" y="275" height="14" width="14.0" class="combo tap glyph material:keyboard_tab"/>
+<path d="M448,286 h-22 a6.0,6.0 0 0 1 -6.0,-6.0 v-16" class="combo"/>
+<path d="M448,286 h22 a6.0,6.0 0 0 0 6.0,-6.0 v-26" class="combo"/>
+<rect rx="8" ry="8" x="432" y="270" width="32" height="32" class="combo"/>
+<use href="#material:keyboard_tab" xlink:href="#material:keyboard_tab" x="441" y="279" height="14" width="14.0" class="combo tap glyph material:keyboard_tab"/>
 </g>
 <g class="combo combopos-8">
-<path d="M280,282 h-21 a6.0,6.0 0 0 1 -6.0,-6.0 v-23" class="combo"/>
-<path d="M280,282 h21 a6.0,6.0 0 0 0 6.0,-6.0 v-12" class="combo"/>
-<rect rx="8" ry="8" x="264" y="266" width="32" height="32" class="combo"/>
-<text x="280" y="282" class="combo tap">NAV</text>
+<path d="M280,286 h-21 a6.0,6.0 0 0 1 -6.0,-6.0 v-27" class="combo"/>
+<path d="M280,286 h21 a6.0,6.0 0 0 0 6.0,-6.0 v-16" class="combo"/>
+<rect rx="8" ry="8" x="264" y="270" width="32" height="32" class="combo"/>
+<text x="280" y="286" class="combo tap">NAV</text>
 </g>
 <g class="combo combopos-9">
 <path d="M616,270 l0,-28" class="combo"/>
@@ -1481,10 +1481,10 @@ path.combo {
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g class="combo combopos-0">
-<path d="M280,282 h-21 a6.0,6.0 0 0 1 -6.0,-6.0 v-23" class="combo"/>
-<path d="M280,282 h21 a6.0,6.0 0 0 0 6.0,-6.0 v-12" class="combo"/>
-<rect rx="8" ry="8" x="264" y="266" width="32" height="32" class="combo"/>
-<text x="280" y="282" class="combo tap">NAV</text>
+<path d="M280,286 h-21 a6.0,6.0 0 0 1 -6.0,-6.0 v-27" class="combo"/>
+<path d="M280,286 h21 a6.0,6.0 0 0 0 6.0,-6.0 v-16" class="combo"/>
+<rect rx="8" ry="8" x="264" y="270" width="32" height="32" class="combo"/>
+<text x="280" y="286" class="combo tap">NAV</text>
 </g>
 <g class="combo combopos-1">
 <path d="M112,270 l0,-28" class="combo"/>
