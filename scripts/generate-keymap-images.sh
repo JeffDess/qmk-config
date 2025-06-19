@@ -11,7 +11,7 @@ parse () {
         keymap -c "$KMD/config.yaml" parse -b "$KMD/base.yaml" -c 10 -q - -o "$KMD/$KBD_NAME"_keymap.yaml \
         -l \
         "Colemak"\
-        "Colemak Accents"\
+        "Accents"\
         "Symbols"\
         "Navigation"\
         "Numbers"\
