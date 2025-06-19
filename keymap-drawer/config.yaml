@@ -454,6 +454,7 @@ parse_config:
     TMUX_SESSION: "TMUX NEW SESSION"
     TO(_COLEMAK): {t: 'COLEMAK', h: 'TOGGLE'}
     UNDO: "$$tabler-o:arrow-back-up$$"
+    FP_ACCEL_TOG: "MOUSE ACCEL"
     U_CI: "Û"
     U_GR: "Ù"
     U_TR: "Ü"
