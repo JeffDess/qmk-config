@@ -22,14 +22,14 @@ layers:
     - ','
     - .
     - {t: Accents, h: TOGGLE}
-  - - DPI RESET
+  - - {t: DPI RESET, type: encoder}
     - BOOT MAGIC
     - {t: '$$material:keyboard_return$$', h: Nav}
     - {t: ESC, h: Numbers, s: '$$material:left_click$$'}
     - {t: '$$material:backspace$$', s: $$delete$$}
     - {t: '$$tabler:space$$', h: Symbols, s: $$nbsp$$}
     - BOOT MAGIC
-    - $$tabler-o:volume-3$$
+    - {t: '$$tabler-o:volume-3$$', type: encoder}
     - $$tabler-o:arrow-back-up$$
     - $$tabler-o:arrow-forward-up$$
   - ['$$tabler-o:arrow-forward-up$$', '$$tabler-o:volume-2$$', '$$tabler-o:volume-3$$', '$$tabler-o:volume$$']
@@ -37,14 +37,14 @@ layers:
   - ['~', ´, Ë, '', '', '', Ï, Ö, Ü, ¨]
   - [À, Ê, É, È, '', '', Î, Ô, Û, '`']
   - [Â, '', Ç, '', '', '', '', '', Ù, ^]
-  - - {t: HAPTIC, h: TOGGLE}
+  - - {t: HAPTIC, h: TOGGLE, type: encoder}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: COLEMAK, h: TOGGLE}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: RGB, h: TOGGLE}
+    - {t: RGB, h: TOGGLE, type: encoder}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
@@ -64,7 +64,7 @@ layers:
     - '&'
     - '|'
   - ['*', '%', '[', ']', _, '', <, '>', «, »]
-  - - ZOOM RESET
+  - - {t: ZOOM RESET, type: encoder}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -91,14 +91,14 @@ layers:
     - $$tabler:arrow-big-right$$
     - INSERT
   - ['', '', '$$tabler-o:volume-2$$', '$$tabler-o:volume$$', '', HOME, PAGE UP, PAGE DOWN, END, SCROLL LOCK]
-  - - $$tabler-o:volume-3$$
+  - - {t: '$$tabler-o:volume-3$$', type: encoder}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - $$tabler-o:volume-3$$
+    - {t: '$$tabler-o:volume-3$$', type: encoder}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
@@ -136,14 +136,14 @@ layers:
   - ['', '', '', '', '', '', '', '', '', '']
   - ['', $$scroll-left$$, $$scroll-up$$, $$scroll-down$$, $$scroll-right$$, $$cursor-left$$, $$cursor-down$$, $$cursor-up$$, $$cursor-right$$, '']
   - ['', LALT, LCTL, LSFT, '', '', LSFT, LCTL, LALT, '']
-  - - DPI RESET
+  - - {t: DPI RESET, type: encoder}
     - {t: ▽, type: trans}
     - $$material:right_click$$
     - $$material:left_click$$
     - ''
     - ''
     - {t: ▽, type: trans}
-    - FP ACCEL TOG
+    - {t: FP ACCEL TOG, type: encoder}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}

@@ -388,6 +388,24 @@ svg path {
     fill: inherit;
 }
 
+.keypos-30 rect,
+.keypos-37 rect,
+rect.encoder {
+    rx: 50%;
+    ry: 50%;
+}
+
+.keypos-30 text,
+.keypos-37 text,
+text.encoder {
+    font-size: 12px;
+}
+
+text.encoder.hold {
+    font-size: 9px;
+    transform: translateY(-8px);
+}
+
 /* font and background color specifications */
 svg.keymap {
     font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
@@ -775,9 +793,9 @@ path.combo {
 <text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 86%">Accents</tspan></text>
 </a><text x="0" y="22" class="key hold">TOGGLE</text>
 </g>
-<g transform="translate(112, 224)" class="key keypos-30">
-<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
-<text x="0" y="0" class="key tap">
+<g transform="translate(112, 224)" class="key encoder keypos-30">
+<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key encoder"/>
+<text x="0" y="0" class="key encoder tap">
 <tspan x="0" dy="-0.6em">DPI</tspan><tspan x="0" dy="1.2em">RESET</tspan>
 </text>
 </g>
@@ -817,9 +835,9 @@ path.combo {
 <tspan x="0" dy="-0.6em">BOOT</tspan><tspan x="0" dy="1.2em">MAGIC</tspan>
 </text>
 </g>
-<g transform="translate(616, 224)" class="key keypos-37">
-<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
-<use href="#tabler-o:volume-3" xlink:href="#tabler-o:volume-3" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler-o:volume-3"/>
+<g transform="translate(616, 224)" class="key encoder keypos-37">
+<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key encoder"/>
+<use href="#tabler-o:volume-3" xlink:href="#tabler-o:volume-3" x="-7" y="-7" height="14" width="14.0" class="key encoder tap glyph tabler-o:volume-3"/>
 </g>
 <g transform="translate(213, 319)" class="key keypos-38">
 <rect rx="8" ry="8" x="-14" y="-14" width="28" height="28" class="key"/>
@@ -1015,10 +1033,10 @@ path.combo {
 <rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
 <text x="0" y="0" class="key tap">^</text>
 </g>
-<g transform="translate(112, 224)" class="key keypos-30">
-<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
-<text x="0" y="0" class="key tap">HAPTIC</text>
-<text x="0" y="22" class="key hold">TOGGLE</text>
+<g transform="translate(112, 224)" class="key encoder keypos-30">
+<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key encoder"/>
+<text x="0" y="0" class="key encoder tap">HAPTIC</text>
+<text x="0" y="22" class="key encoder hold">TOGGLE</text>
 </g>
 <g transform="translate(196, 232)" class="key trans keypos-31">
 <rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key trans"/>
@@ -1045,10 +1063,10 @@ path.combo {
 <rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(616, 224)" class="key keypos-37">
-<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
-<text x="0" y="0" class="key tap">RGB</text>
-<text x="0" y="22" class="key hold">TOGGLE</text>
+<g transform="translate(616, 224)" class="key encoder keypos-37">
+<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key encoder"/>
+<text x="0" y="0" class="key encoder tap">RGB</text>
+<text x="0" y="22" class="key encoder hold">TOGGLE</text>
 </g>
 <g transform="translate(213, 319)" class="key trans keypos-38">
 <rect rx="8" ry="8" x="-14" y="-14" width="28" height="28" class="key trans"/>
@@ -1216,9 +1234,9 @@ path.combo {
 <rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
 <text x="0" y="0" class="key tap">»</text>
 </g>
-<g transform="translate(112, 224)" class="key keypos-30">
-<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
-<text x="0" y="0" class="key tap">
+<g transform="translate(112, 224)" class="key encoder keypos-30">
+<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key encoder"/>
+<text x="0" y="0" class="key encoder tap">
 <tspan x="0" dy="-0.6em">ZOOM</tspan><tspan x="0" dy="1.2em">RESET</tspan>
 </text>
 </g>
@@ -1424,9 +1442,9 @@ path.combo {
 <tspan x="0" dy="-0.6em">SCROLL</tspan><tspan x="0" dy="1.2em">LOCK</tspan>
 </text>
 </g>
-<g transform="translate(112, 224)" class="key keypos-30">
-<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
-<use href="#tabler-o:volume-3" xlink:href="#tabler-o:volume-3" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler-o:volume-3"/>
+<g transform="translate(112, 224)" class="key encoder keypos-30">
+<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key encoder"/>
+<use href="#tabler-o:volume-3" xlink:href="#tabler-o:volume-3" x="-7" y="-7" height="14" width="14.0" class="key encoder tap glyph tabler-o:volume-3"/>
 </g>
 <g transform="translate(196, 232)" class="key trans keypos-31">
 <rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key trans"/>
@@ -1452,9 +1470,9 @@ path.combo {
 <rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(616, 224)" class="key keypos-37">
-<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
-<use href="#tabler-o:volume-3" xlink:href="#tabler-o:volume-3" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler-o:volume-3"/>
+<g transform="translate(616, 224)" class="key encoder keypos-37">
+<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key encoder"/>
+<use href="#tabler-o:volume-3" xlink:href="#tabler-o:volume-3" x="-7" y="-7" height="14" width="14.0" class="key encoder tap glyph tabler-o:volume-3"/>
 </g>
 <g transform="translate(213, 319)" class="key trans keypos-38">
 <rect rx="8" ry="8" x="-14" y="-14" width="28" height="28" class="key trans"/>
@@ -1809,9 +1827,9 @@ path.combo {
 <g transform="translate(700, 190)" class="key keypos-29">
 <rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
 </g>
-<g transform="translate(112, 224)" class="key keypos-30">
-<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
-<text x="0" y="0" class="key tap">
+<g transform="translate(112, 224)" class="key encoder keypos-30">
+<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key encoder"/>
+<text x="0" y="0" class="key encoder tap">
 <tspan x="0" dy="-0.6em">DPI</tspan><tspan x="0" dy="1.2em">RESET</tspan>
 </text>
 </g>
@@ -1837,9 +1855,9 @@ path.combo {
 <rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(616, 224)" class="key keypos-37">
-<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key"/>
-<text x="0" y="0" class="key tap">
+<g transform="translate(616, 224)" class="key encoder keypos-37">
+<rect rx="8" ry="8" x="-25" y="-25" width="50" height="50" class="key encoder"/>
+<text x="0" y="0" class="key encoder tap">
 <tspan x="0" dy="-1.2em">FP</tspan><tspan x="0" dy="1.2em">ACCEL</tspan><tspan x="0" dy="1.2em">TOG</tspan>
 </text>
 </g>

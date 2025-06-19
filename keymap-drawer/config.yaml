@@ -33,6 +33,24 @@ draw_config:
         fill: inherit;
     }
 
+    .keypos-30 rect,
+    .keypos-37 rect,
+    rect.encoder {
+        rx: 50%;
+        ry: 50%;
+    }
+
+    .keypos-30 text,
+    .keypos-37 text,
+    text.encoder {
+        font-size: 12px;
+    }
+
+    text.encoder.hold {
+        font-size: 9px;
+        transform: translateY(-8px);
+    }
+
     /* font and background color specifications */
     svg.keymap {
         font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
@@ -410,13 +428,14 @@ parse_config:
     A_GR: "À"
     CAR: "^"
     CEDIL: "Ç"
+    DPI_RESET: {t: 'DPI RESET', type: 'encoder'}
     E_CI: "Ê"
     E_CU: "É"
     E_TR: "Ë"
     FAT_ARROW: " => "
     GRA: "`"
     GTE: " >= "
-    HF_TOGG: {t: 'HAPTIC', h: 'TOGGLE'}
+    HF_TOGG: {t: 'HAPTIC', h: 'TOGGLE', type: 'encoder'}
     I_TR: "Ï"
     LSFT_T(E_GR): "È"
     LTE: " <= "
@@ -428,7 +447,7 @@ parse_config:
     O_TR: "Ö"
     REDO2: "$$tabler-o:arrow-forward-up$$"
     REDO: "$$tabler-o:arrow-forward-up$$"
-    RGB_TOG: {t: 'RGB', h: 'TOGGLE'}
+    RGB_TOG: {t: 'RGB', h: 'TOGGLE', type: 'encoder'}
     RSFT_T(I_CI): "Î"
     SYM_SP: {t: '$$tabler:space$$', h: "Symbols", s: "$$nbsp$$"}
     TMUX_CMD: "TMUX COMMAND"
