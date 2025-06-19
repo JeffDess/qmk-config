@@ -19,3 +19,17 @@ combos:
   - {p: [10, 11, 12], k: "TMUX SESSION", draw_separate: true}
   - {p: [0, 3], k: "MOUSE TOGGLE", draw_separate: true}
   - {p: [6, 9], k: "GAME TOGGLE", draw_separate: true, type: 'rect.key'}
+  - {p: [37, 37], k: "Vol -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Colemak"]}
+  - {p: [30, 30], k: "DPI -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Colemak"]}
+  - {p: [30, 30], k: "SCROLL -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Accents"]}
+  - {p: [37, 37], k: "RGB -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Accents"]}
+  - {p: [30, 30], k: "ZOOM -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Symbols"]}
+  - {p: [37, 37], k: "PAGE -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Symbols"]}
+  - {p: [30, 30], k: "PAGE -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Navigation"]}
+  - {p: [37, 37], k: "ZOOM -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Navigation"]}
+  - {p: [30, 30], k: "VOL -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Numbers"]}
+  - {p: [37, 37], k: "DPI -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Numbers"]}
+  - {p: [30, 30], k: "RGB MODE", dendron: true, a: 'bottom', offset: 0.5, l: ["Mouse"]}
+  - {p: [37, 37], k: "SCROLL -/+", dendron: true, a: 'bottom', offset: 0.5, l: ["Mouse"]}
+  - {p: [30, 30], k: "RGB SAT", dendron: true, a: 'bottom', offset: 0.5, l: ["Game"]}
+  - {p: [37, 37], k: "RGB HUE", dendron: true, a: 'bottom', offset: 0.5, l: ["Game"]}
