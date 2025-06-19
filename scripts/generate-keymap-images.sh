@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ROOT=$(dirname "$(readlink -f "$0")" | sed 's/\/[^/]*$//')
-IMG="$ROOT/doc/img/keymaps"
+IMG="$ROOT/keyboards/fingerpunch/ximi/v2/keymaps/jeffdess"
 KMD="$ROOT/keymap-drawer"
 
 parse () {
@@ -26,7 +26,7 @@ draw () {
     OPT=$2
     if keymap -c "$KMD/config.yaml" \
         draw "$KMD/$KBD_NAME"_keymap.yaml "$KMD"/combos.yaml -j "$KMD"/ximi.json \
-            -o "$IMG/${KBD_NAME}_keymap.svg" \
+            -o "$IMG/keymap.svg" \
         ; then
         echo "Keymap Drawned"
     else
