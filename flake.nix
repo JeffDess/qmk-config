@@ -24,9 +24,7 @@
             entr
           ];
           shellHook = ''
-            uv venv
-            source .venv/bin/activate
-            uv pip install keymap-drawer==${keymap-drawer_version}
+            uv tool install keymap-drawer==${keymap-drawer_version}
           '';
         };
 
