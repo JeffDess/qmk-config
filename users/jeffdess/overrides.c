@@ -1,6 +1,8 @@
 const key_override_t backspace_delete_override =
     ko_make_basic(MOD_MASK_SHIFT, KC_BACKSPACE, KC_DEL);
 
+const key_override_t space_nbsp_override = ko_make_basic(MOD_MASK_SHIFT, SYM_SP, RALT(KC_SPACE));
+
 const key_override_t plus_minus_override =
     ko_make_with_layers(MOD_MASK_SHIFT, CA_PLUS, CA_MINS, 1 << _NUMBERS);
 
@@ -28,6 +30,7 @@ const key_override_t escape_ctrl_click_override =
 // clang-format off
 const key_override_t **key_overrides = (const key_override_t *[]){
     &backspace_delete_override,
+    &space_nbsp_override,
     &plus_minus_override,
     &multi_div_override,
     &comma_dot_override,
