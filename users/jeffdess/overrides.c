@@ -1,7 +1,8 @@
 const key_override_t backspace_delete_override =
     ko_make_basic(MOD_MASK_SHIFT, KC_BACKSPACE, KC_DEL);
 
-const key_override_t space_nbsp_override = ko_make_basic(MOD_MASK_SHIFT, SYM_SP, RALT(KC_SPACE));
+const key_override_t space_nbsp_override =
+    ko_make_with_layers(MOD_MASK_SHIFT, SYM_SP, RALT(KC_SPACE), 1 << _COLEMAK);
 
 const key_override_t plus_minus_override =
     ko_make_with_layers(MOD_MASK_SHIFT, CA_PLUS, CA_MINS, 1 << _NUMBERS);

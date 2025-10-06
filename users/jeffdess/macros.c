@@ -109,6 +109,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case U_TR:
                 send_accent(KC_U, SS_TREM, mod_state);
                 return false;
+            case SYM_SP:
+                if ((get_mods() & MOD_MASK_SHIFT) || (get_oneshot_mods() & MOD_MASK_SHIFT)) {
+                    if (!record->tap.count && record->event.pressed) {
+                        layer_move(_SYMBOLS);
+                        return false;
+                    }
+                }
             case LCTL_T(KC_S):
                 if (record->event.pressed) {
                     if ((get_mods() & MOD_MASK_CTRL) || (get_oneshot_mods() & MOD_MASK_CTRL)) {
