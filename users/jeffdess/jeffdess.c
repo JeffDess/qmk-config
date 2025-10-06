@@ -2,4 +2,5 @@
 #include "macros.c"
 #include "overrides.c"
 #include "tap-hold.c"
+#include "chordal-hold.c"
 #include "debug.c"
