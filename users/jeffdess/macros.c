@@ -7,10 +7,10 @@ uint8_t mod_state;
 void send_accent(uint16_t keycode, const char *accent, uint8_t mod_state) {
     if (mod_state & MOD_MASK_SHIFT) {
         del_mods(MOD_MASK_SHIFT);
-        SEND_STRING(accent);
+        send_string(accent);
         tap_code16(S(keycode));
     } else {
-        SEND_STRING(accent);
+        send_string(accent);
         tap_code16(keycode);
     }
 }
