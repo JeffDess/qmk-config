@@ -17,10 +17,10 @@ endif
 	+$(MAKE) -C $(QMK_FIRMWARE_ROOT) $(MAKECMDGOALS) QMK_USERSPACE=$(QMK_USERSPACE)
 
 drawing:
-	@./scripts/generate-keymap-images.sh
+	@./scripts/generate-keymap-images.sh $(KB)
 
 preview:
-	@./scripts/generate-keymap-images.sh -p
+	@./scripts/generate-keymap-images.sh -p $(KB)
 
 watch:
-	@find ./keymap-drawer/ | entr -s "make preview"
+	@./scripts/generate-keymap-images.sh --watch $(KB)

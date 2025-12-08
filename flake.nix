@@ -22,6 +22,8 @@
             python313
             uv
             entr
+            resvg
+            yq
           ];
           shellHook = ''
             uv tool install keymap-drawer==${keymap-drawer_version}

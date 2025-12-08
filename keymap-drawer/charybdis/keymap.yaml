@@ -1,0 +1,110 @@
+layout: {qmk_keyboard: bastardkb/charybdis/3x5/v2/splinky_3, layout_name: LAYOUT}
+layers:
+  Colemak:
+  - [Q, W, F, P, B, J, L, U, Y, ;]
+  - - {t: A, h: LGUI}
+    - {t: R, h: LALT}
+    - {t: S, h: LCTL}
+    - {t: T, h: LSFT}
+    - G
+    - M
+    - {t: N, h: RSFT}
+    - {t: E, h: LCTL}
+    - {t: I, h: RALT}
+    - {t: O, h: RGUI}
+  - - Z
+    - X
+    - C
+    - D
+    - V
+    - K
+    - H
+    - ','
+    - .
+    - {t: Accents, h: TOGGLE}
+  - - BOOT MAGIC
+    - {t: '$$material:keyboard_return$$', h: Nav}
+    - {t: ESC, h: Numbers, s: '$$material:left_click$$'}
+    - {t: '$$material:backspace$$', s: $$delete$$}
+    - {t: '$$tabler:space$$', h: Symbols, s: $$nbsp$$}
+  Accents:
+  - ['~', ´, Ë, '', '', '', Ï, Ö, Ü, ¨]
+  - [À, Ê, É, È, '', '', Î, Ô, Û, '`']
+  - [Â, '', Ç, '', '', '', '', '', Ù, ^]
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: COLEMAK, h: TOGGLE}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Symbols:
+  - ['#', '@', '{', '}', +, '', '~', '`', $, '']
+  - - {t: /, s: \}
+    - {t: '-', s: '~'}
+    - (
+    - )
+    - '='
+    - ^
+    - {t: '?', s: ¿}
+    - {t: '!', s: ¡}
+    - '&'
+    - '|'
+  - ['*', '%', '[', ']', _, '', <, '>', «, »]
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Navigation:
+  - ['', '', '', '', '', '', '', '', '', '']
+  - - {t: LGUI, h: sticky}
+    - $$tabler:player-track-prev$$
+    - $$play-pause$$
+    - $$tabler:player-track-next$$
+    - ''
+    - $$tabler:arrow-big-left$$
+    - $$tabler:arrow-big-down$$
+    - $$tabler:arrow-big-up$$
+    - $$tabler:arrow-big-right$$
+    - INSERT
+  - ['', '', '$$tabler-o:volume-2$$', '$$tabler-o:volume$$', '', HOME, PAGE DOWN, PAGE UP, END, SCROLL LOCK]
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Numbers:
+  - [F1, F2, F3, F4, ±, ¼, '7', '8', '9', '*']
+  - - F5
+    - F6
+    - F7
+    - {t: F8, h: LSFT}
+    - °
+    - ½
+    - '4'
+    - '5'
+    - '6'
+    - +
+  - [F9, F10, F11, F12, µ, ¾, '1', '2', '3', ',']
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '0'
+  Mouse:
+  - ['', '', '', '', '', '', '', '', '', '']
+  - ['', $$scroll-left$$, $$scroll-up$$, $$scroll-down$$, $$scroll-right$$, $$cursor-left$$, $$cursor-down$$, $$cursor-up$$, $$cursor-right$$, '']
+  - ['', LALT, LCTL, LSFT, '', '', LSFT, LCTL, LALT, '']
+  - - {t: ▽, type: trans}
+    - $$material:right_click$$
+    - $$material:left_click$$
+    - ''
+    - ''
+  Game:
+  - ['$$material:keyboard_tab$$', Q, W, E, R, '$$material:right_click$$', '$$material:left_click$$', $$click-middle$$, '', LALT]
+  - [LSFT, A, S, D, F, '1', '2', '3', '4', '5']
+  - [LCTL, Z, X, C, V, '6', '7', '8', '9', '0']
+  - - {t: '$$material:backspace$$', s: $$delete$$}
+    - $$tabler:space$$
+    - $$material:keyboard_return$$
+    - ESC
+    - M

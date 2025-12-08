@@ -33,25 +33,6 @@ draw_config:
         fill: inherit;
     }
 
-    g:not([class^="layer-combopos-"])>g .keypos-30 rect,
-    g:not([class^="layer-combopos-"])>g .keypos-37 rect,
-    [class^="layer-combopos-"] .keypos-31 rect,
-    [class^="layer-combopos-"] .keypos-38 rect,
-    rect.encoder {
-        rx: 50%;
-        ry: 50%;
-    }
-
-    .keypos-30 text,
-    .keypos-37 text,
-    text.encoder {
-        font-size: 12px;
-    }
-
-    text.encoder.hold {
-        font-size: 9px;
-        transform: translateY(-8px);
-    }
 
     /* font and background color specifications */
     svg.keymap {
