@@ -6,12 +6,109 @@ permissions:
   contents: write
 
 jobs:
+  debug:
+    name: 'QMK Userspace Build Debug'
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout userspace
+        uses: actions/checkout@v4
+
+      - name: Checkout QMK firmware
+        uses: actions/checkout@v4
+        with:
+          repository: JeffDess/qmk_firmware
+          ref: master
+          path: qmk_firmware
+          submodules: recursive
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v27
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Setup QMK and compile keyboards
+        run: |
+          nix develop --command bash -c '
+            # Setup QMK
+            qmk config user.qmk_home="$(pwd)/qmk_firmware"
+            qmk config user.overlay_dir="$(pwd)"
+            qmk doctor || true
+
+            # Build each keyboard
+            echo "=== Building Ergolite ===" | \
+              tee -a qmk-build.log
+            qmk -v compile -kb keyclicks/w_ergolite -km jeffdess 2>&1 | \
+              tee -a qmk-build.log || \
+                echo "FAILED: w_ergolite" | tee -a qmk-build.log
+
+            echo "" | tee -a qmk-build.log
+            echo "=== Building Ximi ===" | \
+              tee -a qmk-build.log
+            qmk -v compile -kb fingerpunch/ximi/v2 -km jeffdess 2>&1 | \
+              tee -a qmk-build.log || \
+                echo "FAILED: ximi" | tee -a qmk-build.log
+
+            echo "" | tee -a qmk-build.log
+            echo "=== Building Ploopy Nano ===" |\
+              tee -a qmk-build.log
+            qmk -v compile -kb ploopyco/trackball_nano/rev1_001 -km jeffdess 2>&1 \
+            | tee -a qmk-build.log || \
+                echo "FAILED: trackball" | tee -a qmk-build.log
+
+            echo "" | tee -a qmk-build.log
+            echo "=== Building Charybdis Nano ===" | \
+              tee -a qmk-build.log
+            qmk -v compile -kb bastardkb/charybdis/3x5/v2/splinky_3 -km jeffdess 2>&1 \
+            | tee -a qmk-build.log || \
+                echo "FAILED: charybdis" | tee -a qmk-build.log
+          '
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qmk-build-log
+          path: qmk-build.log
+
   build:
     name: 'QMK Userspace Build'
-    uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
-    with:
-      qmk_repo: JeffDess/qmk_firmware
-      qmk_ref: master
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout userspace
+        uses: actions/checkout@v4
+
+      - name: Checkout QMK firmware
+        uses: actions/checkout@v4
+        with:
+          repository: JeffDess/qmk_firmware
+          ref: master
+          path: qmk_firmware
+          submodules: recursive
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v27
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Build all keyboards
+        run: |
+          nix develop --command bash -c '
+            qmk config user.qmk_home="$(pwd)/qmk_firmware"
+            qmk config user.overlay_dir="$(pwd)"
+
+            qmk userspace-compile
+          '
+
+      - name: Upload firmware artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Firmware
+          path: |
+            *.bin
+            *.hex
+            *.uf2
+          if-no-files-found: warn
 
   publish:
     name: 'QMK Userspace Publish'
