@@ -22,6 +22,7 @@ const uint16_t PROGMEM tab[]          = {KC_BSPC, SYM_SP, COMBO_END};
 const uint16_t PROGMEM nav_toggle[]   = {NAV_RET, NUM_ESC, COMBO_END};
 const uint16_t PROGMEM mouse_lclick[] = {KC_F, KC_P, COMBO_END};
 const uint16_t PROGMEM mouse_rclick[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM mouse_scroll[] = {KC_W, KC_F, COMBO_END};
 
 combo_t key_combos[] = {[CB_CUT]          = COMBO_ACTION(cut),
                         [CB_COPY]         = COMBO_ACTION(copy),
@@ -41,7 +42,11 @@ combo_t key_combos[] = {[CB_CUT]          = COMBO_ACTION(cut),
                         [CB_TAB]          = COMBO(tab, KC_TAB),
                         [CB_NAV_TOGGLE]   = COMBO(nav_toggle, TG(_NAV)),
                         [CB_MS_LCLICK]    = COMBO(mouse_lclick, KC_MS_BTN1),
-                        [CB_MS_RCLICK]    = COMBO(mouse_rclick, KC_MS_BTN2)};
+                        [CB_MS_RCLICK]    = COMBO(mouse_rclick, KC_MS_BTN2),
+#ifdef DRG_TOG
+                        [CB_MS_SCROLL] = COMBO(mouse_scroll, DRG_TOG)
+#endif
+};
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
     switch (combo_index) {

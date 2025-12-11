@@ -25,5 +25,6 @@ enum combos {
     CB_TAB,
     CB_NAV_TOGGLE,
     CB_MS_LCLICK,
-    CB_MS_RCLICK
+    CB_MS_RCLICK,
+    CB_MS_SCROLL
 };
