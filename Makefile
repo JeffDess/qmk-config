@@ -16,8 +16,21 @@ endif
 %:
 	+$(MAKE) -C $(QMK_FIRMWARE_ROOT) $(MAKECMDGOALS) QMK_USERSPACE=$(QMK_USERSPACE)
 
+KM := jeffdess
+KB_MAP = \
+  ximi:fingerpunch/ximi/v2 \
+  cnano:bastardkb/charybdis/3x5/v2/splinky_3 \
+  ergolite:keyclicks/w_ergolite \
+  ploopy:ploopyco/trackball_nano/rev1_001
+
 compiledb:
+ifdef KB
+	$(eval KB_PATH := $(or $(patsubst $(KB):%,%,$(filter $(KB):%,$(KB_MAP))),$(KB)))
+	@echo "Generating compile_commands.json for $(KB) → $(KB_PATH):$(KM)"
+	@qmk generate-compilation-database -kb $(KB_PATH) -km $(KM)
+else
 	@./scripts/compiledb.sh
+endif
 
 drawing:
 	@./scripts/generate-keymap-images.sh $(KB)
