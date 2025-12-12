@@ -48,4 +48,4 @@ jq -s 'add' "${all_dbs[@]}" >compile_commands.json
 
 echo "✅ Done! compile_commands.json now contains all $count keyboards."
 
-[[ $count -eq 0 && $has_original == true ]] && mv "$tmp/original.json" "$original_db"
+[[ $count -eq 0 && $has_original == true ]] && mv "$tmp/original.json" "$original_db" || true
