@@ -16,6 +16,9 @@ endif
 %:
 	+$(MAKE) -C $(QMK_FIRMWARE_ROOT) $(MAKECMDGOALS) QMK_USERSPACE=$(QMK_USERSPACE)
 
+compiledb:
+	@./scripts/compiledb.sh
+
 drawing:
 	@./scripts/generate-keymap-images.sh $(KB)
 

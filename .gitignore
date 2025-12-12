@@ -5,6 +5,11 @@
 .DS_Store
 ._*
 
+# clang
+
+.cache/
+compile_commands.json
+
 # Firmware files
 *.hex
 *.bin
