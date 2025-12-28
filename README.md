@@ -3,7 +3,7 @@
 This repository includes my personal QMK keymaps to build firmware for
 keyboards and trackballs:
 
-* [BastardKB Charybdis](keyboards/bastardkb/charybdis/3x5/keymaps/jeffdess/readme.md)
+* [BastardKB Charybdis Nano v2](keyboards/bastardkb/charybdis/3x5/keymaps/jeffdess/readme.md)
 * [Fingerpunch Ximi v2](keyboards/fingerpunch/ximi/v2/keymaps/jeffdess/readme.md)
 * [KeyClicks W-Ergolite](keyboards/keyclicks/w_ergolite/keymaps/jeffdess/readme.md) (WIP)
 * [Ploopy Nano Trackball](keyboards/ploopyco/trackball_nano/rev1_001/keymaps/jeffdess/readme.md)
