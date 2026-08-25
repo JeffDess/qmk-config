@@ -13,6 +13,7 @@ enum combos {
     CB_PRINTSCREEN,
     CB_CAPS_WORD,
     CB_CAPS_LOCK,
+    CB_HERDR,
     CB_TMUX,
     CB_TMUX_COMMAND,
     CB_TMUX_SESS,
