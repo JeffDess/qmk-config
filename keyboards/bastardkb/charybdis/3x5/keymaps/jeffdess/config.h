@@ -3,10 +3,10 @@
 #define MASTER_RIGHT
 
 // Boot mode if pressing down outer thumb key while connecting the keyboard
-#define BOOTMAGIC_ROW_RIGHT 4
-#define BOOTMAGIC_COLUMN_RIGHT 0
-#define BOOTMAGIC_ROW_LEFT 0
-#define BOOTMAGIC_COLUMN_LEFT 6
+#define BOOTMAGIC_ROW 3
+#define BOOTMAGIC_COLUMN 2
+#define BOOTMAGIC_ROW_RIGHT 7
+#define BOOTMAGIC_COLUMN_RIGHT 2
 
 // Size optimizations
 #define NO_ACTION_MACRO
